@@ -1,1 +1,0 @@
-# vrady.github.io
