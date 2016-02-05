@@ -1,0 +1,94 @@
+.container {
+    width: 288px;
+    border: 5px solid #ee8129;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS';
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.header {
+    background-color: #ee8129;
+    text-transform: uppercase;
+    padding: 28px 0px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-content {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 27px;
+    color: #ee8129;
+}
+
+.price {
+    text-align: center;
+    padding-bottom: 27px;
+    font-size: 72px;
+    font-weight: bold;
+    color: #35495A;
+}
+
+.price:before {
+    font-size: 36px;
+    content: "$";
+    vertical-align: super;
+    
+}
+
+.price:after {
+    font-size: 18px;
+    content: "Montly";
+    vertical-align: sub;
+}
+
+.list ul {
+    margin: 0 auto;
+    padding: 0 0;
+    width: 259px;
+    margin-bottom: 18px;
+}
+
+.list ul li {
+    padding: 10px 0;
+    padding-left: 47px; 
+    background-color: #EDF5FD;
+    color: #888C94;
+    font-size: 15px;
+    list-style: none;
+}
+
+.list ul li:nth-child(2n) {
+    background-color: #F5F5F6;
+}
+
+.list ul li:before {
+    content: url(ico.png);
+    margin-right: 17px;
+
+}
+
+.button {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.button input {
+    padding: 14px 0;
+    background-color: #ee8129;
+    color: white;
+    width: 253px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 3px solid #B3560B;
+    border-radius: 5px;
+}
+
+.button input:active {
+    border-bottom: none;
+    margin-bottom: 3px;
+}
