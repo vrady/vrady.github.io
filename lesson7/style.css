@@ -50,8 +50,38 @@ body {
     min-height: 585px;
     background: url(img/background_banner.png) 0 0 no-repeat;
     background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.banner_name {
+    padding-top: 150px;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+.banner_text {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.banner_descr {
+    font-style: italic;
+    margin-bottom: 45px;
+}
+.banner_button {
+    text-transform: uppercase;
+    width: 245px;
+    height: 58px;
+    border: 1px solid #98A9B6;
+    border-radius: 1px;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
 }
 
+.banner_button:active {
+    box-shadow: 0 0 3px #fff;
+}
 .services {
     min-height: 563px;
 }
