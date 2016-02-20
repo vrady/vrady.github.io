@@ -304,6 +304,7 @@ hr {
 }
 .tab_headers {
     border-bottom: 1px solid #e6e6e6;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgb(245, 245, 245) 100%);
 }
 
 .tab_header {
