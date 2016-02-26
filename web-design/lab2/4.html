@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тег progress</title>
+</head>
+<body>
+    <h1>&lt;progress&gt;</h1>
+    <h3>Поддержка:</h3>
+       <pre>
+         IE: 10.0 + 
+         Chrome: 6.0 +
+         Opera: 11.0 + 
+         Firefox: 6.0 +
+         Safari: 5.2 +
+       </pre>
+    <h3>Описание</h3>
+    <p>Используется для отображения прогресса завершенности задачи. Изменение значения происходит через JavaScript.</p>
+    <h3>Синтаксис</h3>
+    <code>&lt;progress value="&lt;число&gt;" max="&lt;число&gt;"&gt;Текст&lt;/progress&gt;</code>
+    <h3>Атрибуты</h3>
+    <pre>
+        value     Текущее значение прогресса.
+        max       Максимальное значение прогресса.
+    </pre>
+    <h3>Закрывающий тег</h3>
+    <p>Обязателен.</p>
+    <h3>Пример</h3>
+    <pre>
+        <code>
+          &lt;body&gt; 
+              &lt;p&gt;Пожалуйста, подождите, фотографии загружаются.&lt;/p&gt;
+              &lt;progress max="100" value="25"&gt;
+                Загружено на <span id="value">25</span>%
+              &lt;/progress&gt;
+          &lt;/body&gt;          
+        </code>
+    </pre>
+</body>
+</html>
