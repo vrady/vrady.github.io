@@ -1,0 +1,10 @@
+{
+  "id":"iphone-6-plus",
+  "name":"iPhone 6 Plus",
+  "price":649,
+  "description": "8MP photos. FullHD video. Apple A8 processor. Large screen.",
+  "canPurchase": true,
+  "screen": 5.5,
+  "reviews": [],
+  "image": "img/iphone_6_plus.jpg"
+}

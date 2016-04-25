@@ -1,0 +1,10 @@
+{
+  "id":"iphone-6s-plus",
+  "name":"iPhone 6S Plus",
+  "price":749,
+  "description": "3D Touch. 12MP photos. 4K video.One powerful phone. Large screen.",
+  "canPurchase": true,
+  "screen": 5.5,
+  "reviews": [],
+  "image": "img/iphone_6s_plus.jpg"
+}

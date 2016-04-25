@@ -1,0 +1,66 @@
+<section class="section white">
+    <div class="row container">
+        <div class="col l12">
+            <h1>{{phone.name}}</h1>
+            <img ng-src="{{phone.image}}" alt="">
+            <h5>Price: {{phone.price | currency}}</h5>
+            <div class="row">
+                <div class="col l12">
+                    <ul class="tabs">
+                        <li class="tab col l3" ng-class="{ active: panel.isSelected(1)}"><a href
+                                                                                            ng-click="panel.selectTab(1)">Description</a>
+                        </li>
+                        <li class="tab col l3" ng-class="{ active: panel.isSelected(2)}"><a href
+                                                                                            ng-click="panel.selectTab(2)">Specs</a>
+                        </li>
+                        <li class="tab col l3" ng-class="{ active: panel.isSelected(3)}"><a href
+                                                                                            ng-click="panel.selectTab(3)">Reviews</a>
+                        </li>
+                    </ul>
+                    <div class="" ng-show="panel.isSelected(1)">
+                        <p>{{phone.description}}</p>
+                    </div>
+                    <div class="" ng-show="panel.isSelected(2)">
+                        <p>None</p>
+                    </div>
+                    <div class="" ng-show="panel.isSelected(3)">
+                        <div ng-repeat="review in product.reviews">
+                            <b>Stars: {{review.stars}}</b><br>
+                            {{review.body}}<br>
+                            <cite class="pull-right">{{review.author}}</cite>
+                        </div>
+
+                    </div>
+                    <form action="">
+                        <!--<div>-->
+                        <!--<b>Stars: {{reviewCtrl.review.stars}}</b><br>-->
+                        <!--{{reviewCtrl.review.body}}<br>-->
+                        <!--<cite class="pull-right">{{reviewCtrl.review.author}}</cite>-->
+                        <!--</div>-->
+                        <div class="input-field col l12">
+                            <select>
+                                <option value="" disabled selected>Rate the product</option>
+                                <option value="1">1 star</option>
+                                <option value="2">2 stars</option>
+                                <option value="3">3 stars</option>
+                                <label>Select</label>
+                            </select>
+                        </div>
+                        <div class="input-field col l12">
+                                <textarea class="materialize-textarea"
+                                          placeholder="Write a short review of the product.."></textarea><br>
+                        </div>
+                        <div class="input-field col l12">
+                            <input name="author" class="validate" type="email"
+                                   placeholder="Input your email address"
+                                   ng-model="reviewCtrl.review.author" required>
+                            <button type="submit" class="btn waves-effect waves-light" value="Submit Review">Submit
+                                Review
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

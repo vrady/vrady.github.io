@@ -1,0 +1,10 @@
+{
+  "id":"iphone-6",
+  "name":"iPhone 6",
+  "price":549,
+  "description": "8MP photos. FullHD video. Apple A8 processor.",
+  "canPurchase": true,
+  "screen": 4.7,
+  "reviews": [],
+  "image": "img/iphone_6.jpg"
+}

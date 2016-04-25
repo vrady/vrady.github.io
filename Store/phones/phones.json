@@ -1,0 +1,52 @@
+[
+  {
+    "id":"iphone-6s-plus",
+    "name":"iPhone 6S Plus",
+    "price":749,
+    "description": "3D Touch. 12MP photos. 4K video.One powerful phone. Large screen.",
+    "canPurchase": true,
+    "screen": 5.5,
+    "reviews": [],
+    "image": "img/iphone_6s_plus.jpg"
+  },
+  {
+    "id":"iphone-6s",
+    "name":"iPhone 6S",
+    "price":649,
+    "description": "3D Touch. 12MP photos. 4K video.One powerful phone.",
+    "canPurchase": true,
+    "screen": 4.7,
+    "reviews": [],
+    "image": "img/iphone_6s.jpg"
+  },
+  {
+    "id":"iphone-6-plus",
+    "name":"iPhone 6 Plus",
+    "price":649,
+    "description": "8MP photos. FullHD video. Apple A8 processor. Large screen.",
+    "canPurchase": true,
+    "screen": 5.5,
+    "reviews": [],
+    "image": "img/iphone_6_plus.jpg"
+  },
+  {
+    "id":"iphone-6",
+    "name":"iPhone 6",
+    "price":549,
+    "description": "8MP photos. FullHD video. Apple A8 processor.",
+    "canPurchase": true,
+    "screen": 4.7,
+    "reviews": [],
+    "image": "img/iphone_6.jpg"
+  },
+  {
+    "id":"iphone-se",
+    "name":"iPhone SE",
+    "price":399,
+    "description": "A big step for small.",
+    "canPurchase": true,
+    "screen": 4.0,
+    "reviews": [],
+    "image": "img/iphone_se.jpg"
+  }
+]

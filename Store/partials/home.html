@@ -1,0 +1,28 @@
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="./img/accessories_for_iphone_light_xlarge.jpg">
+    </div>
+</div>
+<section class="section white">
+    <div class="row container">
+        <div class="col l6 offset-m1 m10 offset-s1 s10 hoverable card small" ng-repeat="phone in phones">
+            <div class="">
+                <img ng-src="{{phone.image}}" class="responsive-img activator right"><br>
+            <span class="card-title valign"><span>{{phone.name}}</span><br>{{phone.price | currency}}<br><span
+                    class="thin">Click on the photo for description</span></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title">{{phone.name}}<i class="material-icons right">close</i></span>
+                <p class="flow-text">{{phone.description}}</p>
+            </div>
+            <div class="card-action">
+                <a href="#/{{phone.id}}" class="waves-effect waves-light btn">Order</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="./img/accessories_large.jpg">
+    </div>
+</div>

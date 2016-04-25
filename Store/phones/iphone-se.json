@@ -1,0 +1,10 @@
+{
+  "id":"iphone-se",
+  "name":"iPhone SE",
+  "price":399,
+  "description": "A big step for small.",
+  "canPurchase": true,
+  "screen": 4.0,
+  "reviews": [],
+  "image": "img/iphone_se.jpg"
+}

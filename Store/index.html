@@ -5,48 +5,23 @@
     <title>Store</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="bower_components/Materialize/dist/css/materialize.min.css">
+    <link rel="shortcut icon" href="img/favicon_apple.png" type="image/png">
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="PhoneListCtrl" class="grey darken-4">
+<body class="grey darken-4">
 <header class="navbar">
     <nav>
         <div class="nav-wrapper grey darken-4">
-            <a href="#" class="brand-logo center thin">Apple Store</a>
+            <a href="#/" class="brand-logo center thin">Apple Store</a>
         </div>
     </nav>
 </header>
 
-<main>
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="img/accessories_for_iphone_light_xlarge.jpg">
-        </div>
-    </div>
-    <section class="section white">
-        <div class="row container">
-            <div class="col l6 offset-m1 m10 offset-s1 s10 hoverable card small" ng-repeat="phone in phones">
-                <div class="">
-                    <img ng-src="{{phone.image}}" class="responsive-img activator right"><br>
-            <span class="card-title valign"><span>{{phone.name}}</span><br>{{phone.price | currency}}<br><span
-                    class="thin">Click on the photo for description</span></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title">{{phone.name}}<i class="material-icons right">close</i></span>
-                    <p class="flow-text">{{phone.description}}</p>
-                </div>
-                <div class="card-action">
-                    <a class="waves-effect waves-light btn">Order</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="img/accessories_large.jpg">
-        </div>
-    </div>
-</main>
+<div ng-view></div>
+
 <footer class="page-footer grey darken-4">
     <div class="container">
         <div class="row">
@@ -64,11 +39,6 @@
     </div>
 </footer>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.parallax').parallax();
-    });
-</script>
 <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
 </body>
 </html>
