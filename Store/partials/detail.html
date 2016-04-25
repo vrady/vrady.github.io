@@ -47,13 +47,12 @@
                             </select>
                         </div>
                         <div class="input-field col l12">
-                                <textarea class="materialize-textarea"
-                                          placeholder="Write a short review of the product.."></textarea><br>
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Write a short review of the product..</label>
                         </div>
                         <div class="input-field col l12">
-                            <input name="author" class="validate" type="email"
-                                   placeholder="Input your email address"
-                                   ng-model="reviewCtrl.review.author" required>
+                            <input id="email" class="validate" type="email">
+                            <label for="email">Email</label>
                             <button type="submit" class="btn waves-effect waves-light" value="Submit Review">Submit
                                 Review
                             </button>
