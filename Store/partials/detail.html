@@ -2,62 +2,67 @@
     <div class="row container">
         <div class="col l12">
             <h1>{{phone.name}}</h1>
-            <img ng-src="{{phone.image}}" alt="">
-            <h5>Price: {{phone.price | currency}}</h5>
-            <div class="row">
+            <div class="col l3">
+                <img ng-src="{{phone.image}}" alt="">
+                <h5>Price: {{phone.price | currency}}</h5>
+            </div>
+            <div class="col l9">
                 <div class="col l12">
                     <ul class="tabs">
-                        <li class="tab col l3" ng-class="{ active: panel.isSelected(1)}"><a href
-                                                                                            ng-click="panel.selectTab(1)">Description</a>
+                        <li class="tab col l3" ng-class="{ active: isSelected(1)}"><a href
+                                                                                      ng-click="selectTab(1)">Description</a>
                         </li>
-                        <li class="tab col l3" ng-class="{ active: panel.isSelected(2)}"><a href
-                                                                                            ng-click="panel.selectTab(2)">Specs</a>
+                        <li class="tab col l3" ng-class="{ active: isSelected(2)}"><a href
+                                                                                      ng-click="selectTab(2)">Specs</a>
                         </li>
-                        <li class="tab col l3" ng-class="{ active: panel.isSelected(3)}"><a href
-                                                                                            ng-click="panel.selectTab(3)">Reviews</a>
+                        <li class="tab col l3" ng-class="{ active: isSelected(3)}"><a href
+                                                                                      ng-click="selectTab(3)">Reviews</a>
                         </li>
                     </ul>
-                    <div class="" ng-show="panel.isSelected(1)">
+                    <div class="" ng-show="isSelected(1)">
                         <p>{{phone.description}}</p>
                     </div>
-                    <div class="" ng-show="panel.isSelected(2)">
+                    <div class="" ng-show="isSelected(2)">
                         <p>None</p>
                     </div>
-                    <div class="" ng-show="panel.isSelected(3)">
-                        <div ng-repeat="review in product.reviews">
-                            <b>Stars: {{review.stars}}</b><br>
-                            {{review.body}}<br>
-                            <cite class="pull-right">{{review.author}}</cite>
-                        </div>
-
+                    <div class="" ng-show="isSelected(3)">
+                        <blockquote ng-repeat="review in phone.reviews">
+                            <b>Stars: {{phone.review.stars}}</b><br>
+                            {{phone.review.body}}<br>
+                            <cite class="right">{{phone.review.author}}</cite>
+                        </blockquote>
+                        <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                              ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+                            <blockquote>
+                                <b>Stars: {{reviewCtrl.review.stars}}</b><br>
+                                {{reviewCtrl.review.body}}<br>
+                                <cite class="right">{{reviewCtrl.review.author}}</cite>
+                            </blockquote>
+                            <div class="input-field col l12">
+                                <select class="browser-default" ng-model="reviewCtrl.review.stars"
+                                        ng-options="stars for stars in [5,4,3,2,1]" required>
+                                    <option value="" disabled selected>Rate the product</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-field col l12">
+                                <!--<textarea id="textarea1" class="materialize-textarea"></textarea>-->
+                                <textarea id="textarea1" class="form-control materialize-textarea" cols="62" rows="3"
+                                          ng-model="reviewCtrl.review.body" required></textarea>
+                                <label for="textarea1">Write a short review of the product..</label>
+                            </div>
+                            <br>
+                            <div class="input-field col l12">
+                                <input id="email" name="author" class="form-control validate" type="email"
+                                       ng-model="reviewCtrl.review.author" required>
+                                <label for="email">Email</label>
+                                <button type="submit" class="btn waves-effect waves-light" value="Submit Review">Submit
+                                    Review
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <form action="">
-                        <!--<div>-->
-                        <!--<b>Stars: {{reviewCtrl.review.stars}}</b><br>-->
-                        <!--{{reviewCtrl.review.body}}<br>-->
-                        <!--<cite class="pull-right">{{reviewCtrl.review.author}}</cite>-->
-                        <!--</div>-->
-                        <div class="input-field col l12">
-                            <select>
-                                <option value="" disabled selected>Rate the product</option>
-                                <option value="1">1 star</option>
-                                <option value="2">2 stars</option>
-                                <option value="3">3 stars</option>
-                                <label>Select</label>
-                            </select>
-                        </div>
-                        <div class="input-field col l12">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Write a short review of the product..</label>
-                        </div>
-                        <div class="input-field col l12">
-                            <input id="email" class="validate" type="email">
-                            <label for="email">Email</label>
-                            <button type="submit" class="btn waves-effect waves-light" value="Submit Review">Submit
-                                Review
-                            </button>
-                        </div>
-                    </form>
+
                 </div>
             </div>
         </div>
