@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Dima Vrady</title>
+    <meta property="og:title" content="Dima Vrady" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="vrady.github.io" />
+    <meta property="og:image" content="img/icon.png" />
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="bower_components/Materialize/dist/js/materialize.min.js">
@@ -37,9 +41,11 @@
     </style>
 </head>
 <body>
+<!--[if !IE]>-->
 <div id="hellopreloader">
     <div id="hellopreloader_preload"></div>
 </div>
+<!--<![endif]-->
 <main>
     <div class="section">
         <div class="row container white-text">
@@ -73,6 +79,7 @@
         </div>
     </div>
 </footer>
+
 <script type="text/javascript">
     var hellopreloader = document.getElementById("hellopreloader_preload");
     function fadeOutnojquery(el) {
