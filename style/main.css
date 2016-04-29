@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     background: url("../img/img-blur.jpg") no-repeat;
     background-size: cover;
-    filter: blur(3px);
 }
 
 main {
