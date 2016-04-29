@@ -38,6 +38,13 @@
             background: #000 url(http://hello-site.ru//main/images/preloads/rings.svg) center center no-repeat;
             background-size: 300px;
         }
+        .container_canvas{
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 30%;
+            left: 40%;
+        }
     </style>
 </head>
 <body>
@@ -46,14 +53,21 @@
     <div id="hellopreloader_preload"></div>
 </div>
 <!--<![endif]-->
-<main>
-    <div class="section">
-        <div class="row container white-text">
-            <h1 class="center"><span class="pacifico-font ">Dima Vrady</span></h1><br>
-            <p class="center flow-text caviar-font">website under construction..</p>
-        </div>
+<div id="large-header">
+    <div class="container_canvas white-text">
+        <h1 class="center"><span class="pacifico-font">Dima Vrady</span></h1>
+        <p class="center flow-text caviar-font">website under construction..</p>
     </div>
-</main>
+    <canvas id="demo-canvas"></canvas>
+</div>
+<!--<main>-->
+    <!--<div class="section">-->
+        <!--<div class="row container white-text">-->
+            <!--<h1 class="center"><span class="pacifico-font ">Dima Vrady</span></h1>-->
+            <!--<p class="center flow-text caviar-font">website under construction..</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</main>-->
 <footer class="page-footer transparent">
     <div class="footer-copyright">
         <div class="container row center">
@@ -98,5 +112,9 @@
         }, 100);
     };
 </script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/rAF.js"></script>
+<script src="js/demo-1.js"></script>
 </body>
 </html>
