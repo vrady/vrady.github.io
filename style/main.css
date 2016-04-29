@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(../fonts/Pacifico.ttf);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url("../img/img-blur.jpg") no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.pacifico-font {
+    font-family: Pacifico;
+}
+
+.caviar-font {
+    font-family: "Caviar Dreams";
+}
