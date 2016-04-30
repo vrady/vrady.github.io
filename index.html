@@ -15,11 +15,6 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/png">
 </head>
 <body>
-<!--[if !IE]>-->
-<div id="hellopreloader">
-    <div id="hellopreloader_preload"></div>
-</div>
-<!--<![endif]-->
 <div id="large-header">
     <div class="container_canvas white-text">
         <h1 class="center"><span class="pacifico-font">Dima Vrady</span></h1>
@@ -27,19 +22,11 @@
     </div>
     <canvas id="demo-canvas"></canvas>
 </div>
-<!--<main>-->
-    <!--<div class="section">-->
-        <!--<div class="row container white-text">-->
-            <!--<h1 class="center"><span class="pacifico-font ">Dima Vrady</span></h1>-->
-            <!--<p class="center flow-text caviar-font">website under construction..</p>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</main>-->
 <footer class="page-footer transparent">
     <div class="footer-copyright">
         <div class="container row center">
             <div class="col l12 s12 m12 pull-right">
-                <div class="col l2 s2 m2 offset-s1 offset-m1 offset-l1 ">
+                <div class="col l2 s2 m2">
                     <a href="http://github.com/vrady" target="_blank" class="waves-effect"><i class="fa fa-2x fa-github"></i></a>
                 </div>
                 <div class="col l2 s2 m2">
@@ -56,11 +43,17 @@
                 <div class="col l2 s2 m2">
                     <a href="skype:vradiy97?call" class="waves-effect"><i class="fa fa-2x fa-skype"></i></a>
                 </div>
+                <div class="col l2 s2 m2">
+                    <a href="mailto:wiggledima@gmail.com" class="waves-effect"><i class="fa fa-2x fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </footer>
-
+<!--[if !IE]>-->
+<div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+</div>
 <script type="text/javascript">
     var hellopreloader = document.getElementById("hellopreloader_preload");
     function fadeOutnojquery(el) {
@@ -79,6 +72,7 @@
         }, 100);
     };
 </script>
+<!--<![endif]-->
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>
