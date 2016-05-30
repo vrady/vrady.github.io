@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task3</title>
+    <meta name="Author" content="Vrady Dmytro">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="calculator__menu">
+        <div class="calculator__option calculator__option-active" id="normal" onclick="$(this).addClass('calculator__option-active');
+            $('#engineer').removeClass('calculator__option-active');$('#extended').hide('fast')">Звичайний</div><div
+            class="calculator__option" id="engineer" onclick="$(this).addClass('calculator__option-active');
+            $('#normal').removeClass('calculator__option-active');$('#extended').show('fast')">Інженерний</div>
+    </div>
+    <div class="calculator__display" id="display"></div>
+    <div class="calculator__buttons">
+        <div class="calculator__numbers">
+            <div class="calculator__number" id="one" data-value="1">1</div>
+            <div class="calculator__number" id="two" data-value="2">2</div>
+            <div class="calculator__number" id="three" data-value="3">3</div>
+            <div class="calculator__number" id="four" data-value="4">4</div>
+            <div class="calculator__number" id="five" data-value="5">5</div>
+            <div class="calculator__number" id="six" data-value="6">6</div>
+            <div class="calculator__number" id="seven" data-value="7">7</div>
+            <div class="calculator__number" id="eight" data-value="8">8</div>
+            <div class="calculator__number" id="nine" data-value="9">9</div>
+            <div class="calculator__number" id="point" data-value=".">.</div>
+            <div class="calculator__number" id="zero" data-value="0">0</div>
+            <div class="calculator__number" id="equal" data-value="=">=</div>
+        </div>
+        <div class="calculator__operations">
+            <div class="calculator__operation" id="clear" data-value="clear">C</div>
+            <div class="calculator__operation" id="delete" data-value="del"><</div>
+            <div class="calculator__operation" id="plus" data-value="+">+</div>
+            <div class="calculator__operation" id="minus" data-value="-">-</div>
+            <div class="calculator__operation" id="mul" data-value="*">*</div>
+            <div class="calculator__operation" id="div" data-value="/">/</div>
+            <div class="calculator__operation" id="square" data-value="x2">x<sup>2</sup></div>
+            <div class="calculator__operation" id="square_root" data-value="2x"><sup>2</sup>√</div>
+        </div>
+        <div class="calculator__extended none" id="extended">
+            <div class="calculator__extended-item" id="sin">sin</div>
+            <div class="calculator__extended-item" id="cos">cos</div>
+            <div class="calculator__extended-item" id="tan">tan</div>
+            <div class="calculator__extended-item" id="cotan">cotan</div>
+            <div class="calculator__extended-item" id="log">log</div>
+            <div class="calculator__extended-item" id="sinh">sinh</div>
+            <div class="calculator__extended-item" id="cosh">cosh</div>
+            <div class="calculator__extended-item" id="ln">ln</div>
+            <div class="calculator__extended-item" id="x3">x<sup>3</sup></div>
+            <div class="calculator__extended-item" id="xn">x<sup>n</sup></div>
+            <div class="calculator__extended-item" id="pi">pi</div>
+            <div class="calculator__extended-item" id="triple_root"><sup>3</sup>√</div>
+            <div class="calculator__extended-item" id="n_root"><sup>n</sup>√</div>
+            <div class="calculator__extended-item" id="root2">√2</div>
+            <div class="calculator__extended-item" id="root3">√3</div>
+        </div>
+    </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
