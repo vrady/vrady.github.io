@@ -9,10 +9,8 @@
 <body>
 <div class="calculator">
     <div class="calculator__menu">
-        <div class="calculator__option calculator__option-active" id="normal" onclick="$(this).addClass('calculator__option-active');
-            $('#engineer').removeClass('calculator__option-active');$('#extended').hide('fast')">Звичайний</div><div
-            class="calculator__option" id="engineer" onclick="$(this).addClass('calculator__option-active');
-            $('#normal').removeClass('calculator__option-active');$('#extended').show('fast')">Інженерний</div>
+        <div class="calculator__option calculator__option-active" id="normal" onclick="normal()">Звичайний</div><div
+            class="calculator__option" id="engineer" onclick="engineer()">Інженерний</div>
     </div>
     <div class="calculator__display" id="display"></div>
     <div class="calculator__buttons">
