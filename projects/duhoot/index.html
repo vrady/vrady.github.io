@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DuHoot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container flex flex-v">
+        <div class="header__logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <ul class="header__nav nav">
+            <li class="nav__item">Reality</li>
+            <li class="nav__item">Living</li>
+            <li class="nav__item">Education</li>
+            <li class="nav__item">Entertainment</li>
+            <li class="nav__item">Mobility</li>
+        </ul>
+        <a href="#" class="header__search"></a>
+        <a href="#" class="header__login flex">Login</a>
+    </div>
+</header>
+<section class="search">
+    <div class="container flex flex-h flex-v flex-column">
+        <div class="search__title">What are you looking for?</div>
+        <div class="search__form">
+            <form action="">
+                <select name="" id="city" class="search__select">
+                    <option value="Dubai" selected>Dubai</option>
+                </select>
+                <select name="" id="goal" class="search__select">
+                    <option value="Education" selected>Education</option>
+                </select><br>
+                <input type="text" class="search__input" placeholder="Keyword, name, date, ..."><br>
+                <div style="text-align: center;">
+                    <button type="submit" class="search__button">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="filter">
+    <div class="container flex flex-v">
+        <div class="filter__bookmarks flex">
+            <div class="filter__bookmark filter__bookmark--active">Recommended</div>
+            <div class="filter__bookmark">Latest</div>
+            <div class="filter__bookmark">Highlights</div>
+        </div>
+        <div class="filter__city"></div>
+        <div class="filter__map"></div>
+        <div class="filter__items flex flex-v">
+            <div class="filter__bookmark">Filter:</div>
+            <div class="filter__item filter__item--home filter__item--home-active"></div>
+            <div class="filter__item filter__item--woman"></div>
+            <div class="filter__item filter__item--edu"></div>
+            <div class="filter__item filter__item--music filter__item--music-active"></div>
+            <div class="filter__item filter__item--bus filter__item--bus-active"></div>
+        </div>
+    </div>
+</section>
+<section class="offer">
+    <div class="container flex flex-h flex-v flex-column">
+        <div class="offer__title">What can DuHoot offer to you?</div>
+        <div class="offer__subtitle">Etiam cursus ipsum quis enim faucibus</div>
+        <div class="offer__items flex flex-h">
+            <div class="offer__item offer__item--active offer__item--home"></div>
+            <div class="offer__item offer__item--woman"></div>
+            <div class="offer__item offer__item--edu"></div>
+            <div class="offer__item offer__item--music"></div>
+            <div class="offer__item offer__item--bus"></div>
+        </div>
+        <div class="offer__name">Reality</div>
+        <div class="offer__descriptions flex flex-h flex-v">
+            <div class="offer__description">
+                <div class="offer__logo offer__logo--energy"></div>
+                <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae
+                    risus est. In hendrerit, massa at.
+                </div>
+            </div>
+            <div class="offer__description">
+                <div class="offer__logo offer__logo--leaf"></div>
+                <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae
+                    risus est. In hendrerit, massa at.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container flex-column flex flex-v">
+        <div class="footer__title">Subscribe to our newsletter</div>
+        <div class="footer__subscribe">
+
+        </div>
+        <div class="footer__menu flex">
+            <div class="footer__column column">
+                <div class="column__title">Ipsum quis</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+            </div>
+            <div class="footer__column column">
+                <div class="column__title">Ipsum quis</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+                <div class="column__item">Lorem ipsum.</div>
+            </div>
+            <div class="footer__column column">
+                <div class="column__title">Follow us</div>
+                <div class="footer__social social">
+                    <a href="http://fb.com" class="social__item social__item--fb"></a>
+                    <a href="http://twitter.com" class="social__item social__item--tw"></a>
+                    <a href="http://plus.google.com" class="social__item social__item--gp"></a>
+                    <a href="http://youtube.com" class="social__item social__item--yt"></a>
+                </div>
+                <div class="column__item">Copyright All Rights Reserved</div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
