@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="67" height="67" viewBox="0 0 67 67">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 2px;
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g>
+    <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAmCAMAAABwIXKiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATlBMVEXz8/Oqqqo+Pj4LCwurq6t1dXUAAAAGBgaKiorj4+OJiYmCgoIMDAzi4uKDg4OpqakKCgrf398pKSne3t7KysoBAQHLy8sqKiqMjIyQkJD4WfBiAAAAAWJLR0QGYWa4fQAAAAlwSFlzAAALEgAACxIB0t1+/AAAALxJREFUOMvV0tsSgiAQBmAOumppCWbK+79oQjOIwMJe1t4g8A2/rDL2Y8WFlKKpshZctRXWQNcPQ98BLzsBNzvcQZTdCJMdJhiJTpJyH7VcTrwHtS+MPcU8i9ppf1FK0ZjWFKg0AA591sG0RqHPsmxRGPRZjn0HlWXaAb+fhT7rde5m4Jm1BnsJDLPWd2Y9mR6Pm0JgPIngjh5+gabwslvaOOTyMVywZkaLO/pxomWDfWzSDxj2owINiV3qA7X5Dun0pKMUAAAAAElFTkSuQmCC" x="14" y="15" width="39" height="38"/>
+    <rect x="5" y="5" width="61" height="61" class="cls-1"/>
+    <rect x="1" y="1" width="61" height="61" class="cls-1"/>
+  </g>
+</svg>
