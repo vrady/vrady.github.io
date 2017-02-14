@@ -56,8 +56,12 @@
             <div class="filter__bookmark">Latest</div>
             <div class="filter__bookmark">Highlights</div>
         </div>
-        <div class="filter__city"></div>
-        <div class="filter__map"></div>
+        <div class="filter__city flex flex-h flex-v">
+            <select name="filter" id="" class="filter__city-select">
+                <option value="Dubai" selected>Dubai</option>
+            </select>
+        </div>
+        <div class="filter__map flex flex-v flex-h">Show map</div>
         <div class="filter__items flex flex-v">
             <div class="filter__bookmark">Filter:</div>
             <div class="filter__item filter__item--home filter__item--home-active"></div>
@@ -176,8 +180,10 @@
                             <div class="rate__item rate__item--big"></div>
                         </div>
                         <h2 class="review__name">Lucy-P</h2>
-                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
-                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim
+                            faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -210,8 +216,10 @@
                             <div class="rate__item rate__item--full rate__item--big"></div>
                         </div>
                         <h2 class="review__name">Peter145</h2>
-                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
-                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim
+                            faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -322,8 +330,10 @@
                             <div class="rate__item rate__item--full rate__item--big"></div>
                         </div>
                         <h2 class="review__name">Peter145</h2>
-                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
-                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim
+                            faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -407,9 +417,16 @@
 <footer class="footer">
     <div class="container flex-column flex flex-v">
         <h1 class="footer__title">Subscribe to our newsletter</h1>
-        <div class="footer__subscribe">
-
-        </div>
+        <form action="" class="footer__subscribe flex flex-v">
+            <div class="footer__subscribe-form subscribe-form flex flex-spb">
+                <div class="subscribe-form__email-wrapper flex flex-v">
+                    <input type="email" class="subscribe-form__email" placeholder="your@email.com">
+                </div>
+                <div class="subscribe-form__button-wrapper">
+                    <button type="submit" class="subscribe-form__button">Subscribe</button>
+                </div>
+            </div>
+        </form>
         <div class="footer__menu flex">
             <div class="footer__column column">
                 <div class="column__title">Ipsum quis</div>

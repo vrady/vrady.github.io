@@ -155,6 +155,7 @@ body {
     border: 1px solid #645e53;
     border-radius: 30px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .search__select:focus {
@@ -221,12 +222,37 @@ body {
     margin-right: 10px;
 }
 
+.filter__city-select {
+    margin: 0 10px;
+    width: 100%;
+    border: none;
+    color: #e94e38;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.filter__city-select:focus {
+    outline: none;
+}
+
 .filter__map {
     height: 35px;
     width: 125px;
     border: 1px solid #cad2d3;
     border-radius: 50px;
     margin-right: 60px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #96a6a7;
+}
+
+.filter__map:hover {
+    background-color: #1baf5d;
+    border: 1px solid #1baf5d;
+    color: #fff;
+    transition: .2s;
 }
 
 .filter__item {
@@ -659,6 +685,70 @@ body {
     background-color: rgba(255, 255, 255, .1);
     margin-bottom: 55px;
     border-radius: 50px;
+}
+
+.subscribe-form {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.subscribe-form__email-wrapper {
+    position: relative;
+    margin-left: 65px;
+}
+
+.subscribe-form__email-wrapper::before {
+    content: url(img/mail.png);
+    position: absolute;
+    top: 18px;
+    left: -30px;
+    width: 10px;
+    height: 20px;
+}
+
+.subscribe-form__email {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+.subscribe-form__email:focus {
+    outline: none;
+}
+
+.subscribe-form__email::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.subscribe-form__email::-moz-placeholder {
+    color: #fff;
+}
+
+.subscribe-form__email:-ms-input-placeholder {
+    color: #fff;
+}
+
+.subscribe-form__button {
+    width: 120px;
+    height: 50px;
+    background-color: #e94e38;
+    border: none;
+    border-bottom: 2px solid #c1412e;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.subscribe-form__button:hover {
+    background-color: #c1412e;
+    transition: .2s;
+}
+
+.subscribe-form__button:focus {
+    outline: none;
 }
 
 .footer__menu {
