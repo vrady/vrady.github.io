@@ -106,6 +106,10 @@ body {
 
 }
 
+.header__hamburger {
+    display: none;
+}
+
 .search {
     background: url(img/search-bg.jpg) no-repeat;
     background-size: cover;
@@ -821,8 +825,54 @@ body {
     .container {
         width: 100%;
     }
+
+    .header {
+        position: relative;
+    }
+
     .header__right {
         display: none;
+    }
+    
+    .header__hamburger {
+        display: block;
+    }
+
+    .hamburger__list {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+    }
+
+    .hamburger__list--active {
+        display: none;
+    }
+
+    .hamburger__item {
+        list-style: none;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 5px 0;
+    }
+    
+    .hamburger__item:hover {
+        color: #8d8d8d;
+    }
+
+    .hamburger__toggle {
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .hamburger__toggle:hover {
+        color: #7d7d7d;
+        transition: .2s;
     }
 
     .search {

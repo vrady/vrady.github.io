@@ -27,6 +27,18 @@
                 <a href="#" class="header__login">Login</a>
             </div>
         </div>
+        <div class="header__hamburger hamburger">
+            <a href="#" class="hamburger__toggle">☰</a>
+            <ul class="hamburger__list hamburger__list--active">
+                <li class="hamburger__item">Reality</li>
+                <li class="hamburger__item">Living</li>
+                <li class="hamburger__item">Education</li>
+                <li class="hamburger__item">Entertainment</li>
+                <li class="hamburger__item">Mobility</li>
+                <li class="hamburger__item">Search</li>
+                <li class="hamburger__item">Login</li>
+            </ul>
+        </div>
     </div>
 </header>
 <section class="search">
@@ -460,5 +472,15 @@
         </div>
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.hamburger__toggle').click(function (e) {
+            $(this).toggleClass('active');
+            $('.hamburger__list').toggleClass('hamburger__list--active');
+            e.preventDefault();
+        })
+    })
+</script>
 </body>
 </html>
