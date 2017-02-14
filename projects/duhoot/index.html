@@ -7,34 +7,42 @@
 </head>
 <body>
 <header class="header">
-    <div class="container flex flex-v">
-        <div class="header__logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
+    <div class="container flex flex-v flex-spb">
+        <div class="header__logo-wrap">
+            <a href="#" class="header__logo-link"><img src="img/logo.png" alt="" class="header__logo"></a>
         </div>
-        <ul class="header__nav nav">
-            <li class="nav__item">Reality</li>
-            <li class="nav__item">Living</li>
-            <li class="nav__item">Education</li>
-            <li class="nav__item">Entertainment</li>
-            <li class="nav__item">Mobility</li>
-        </ul>
-        <a href="#" class="header__search"></a>
-        <a href="#" class="header__login flex">Login</a>
+        <div class="header__right flex flex-v">
+            <ul class="header__nav nav flex flex-spb">
+                <li class="nav__item">Reality</li>
+                <li class="nav__item">Living</li>
+                <li class="nav__item">Education</li>
+                <li class="nav__item">Entertainment</li>
+                <li class="nav__item">Mobility</li>
+            </ul>
+            <div class="header__search-wrapper">
+                <a href="#" class="header__search"></a>
+            </div>
+            <div class="header__login-wrapper flex flex-v">
+                <a href="#" class="header__login">Login</a>
+            </div>
+        </div>
     </div>
 </header>
 <section class="search">
     <div class="container flex flex-h flex-v flex-column">
-        <div class="search__title">What are you looking for?</div>
+        <h1 class="search__title">What are you looking for?</h1>
         <div class="search__form">
             <form action="">
-                <select name="" id="city" class="search__select">
-                    <option value="Dubai" selected>Dubai</option>
-                </select>
-                <select name="" id="goal" class="search__select">
-                    <option value="Education" selected>Education</option>
-                </select><br>
+                <div class="search__selects flex">
+                    <select name="" id="city" class="search__select">
+                        <option value="Dubai" selected>Dubai</option>
+                    </select>
+                    <select name="" id="goal" class="search__select">
+                        <option value="Education" selected>Education</option>
+                    </select>
+                </div>
                 <input type="text" class="search__input" placeholder="Keyword, name, date, ..."><br>
-                <div style="text-align: center;">
+                <div class="search__button-wrapper flex flex-h">
                     <button type="submit" class="search__button">Search</button>
                 </div>
             </form>
@@ -60,31 +68,337 @@
         </div>
     </div>
 </section>
-<section class="offer">
-    <div class="container flex flex-h flex-v flex-column">
-        <div class="offer__title">What can DuHoot offer to you?</div>
-        <div class="offer__subtitle">Etiam cursus ipsum quis enim faucibus</div>
-        <div class="offer__items flex flex-h">
-            <div class="offer__item offer__item--active offer__item--home"></div>
-            <div class="offer__item offer__item--woman"></div>
-            <div class="offer__item offer__item--edu"></div>
-            <div class="offer__item offer__item--music"></div>
-            <div class="offer__item offer__item--bus"></div>
-        </div>
-        <div class="offer__name">Reality</div>
-        <div class="offer__descriptions flex flex-h flex-v">
-            <div class="offer__description">
-                <div class="offer__logo offer__logo--energy"></div>
-                <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae
-                    risus est. In hendrerit, massa at.
+<section class="posts">
+    <div class="container">
+        <div class="posts__row flex flex-spa">
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
+                    <img src="img/small-house.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__price flex flex-h flex-v">$2,990</div>
+                    <div class="item-small__logo item-small__logo-house"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">2 bedroom house for rent in Dubai</div>
+                    <div class="item-small__company item-small__company--house">Vision Agency</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item"></div>
+                        <div class="rate__number">(365)</div>
+                    </div>
                 </div>
             </div>
-            <div class="offer__description">
-                <div class="offer__logo offer__logo--leaf"></div>
-                <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae
-                    risus est. In hendrerit, massa at.
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
+                    <img src="img/small-music.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__logo item-small__logo-music"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">Beach party festival 2014</div>
+                    <div class="item-small__company item-small__company--music">Long Beach</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__number">(1165)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
+                    <img src="img/small-bus.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__logo item-small__logo-bus"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">Aliquam quis pulvinar purus</div>
+                    <div class="item-small__company item-small__company--bus">Bus Trans</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__number">(365)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
+                    <img src="img/small-house1.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__price flex flex-h flex-v">$2,990</div>
+                    <div class="item-small__logo item-small__logo-house"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">4 bedroom house for rent in Dubai</div>
+                    <div class="item-small__company item-small__company--house">Reality Agency</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item"></div>
+                        <div class="rate__number">(165)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts__row flex flex-spa">
+            <div class="posts__item-big item-big">
+                <div class="item-big__photo-wrapper item-small__photo-wrapper--house flex">
+                    <img src="img/big-house1.jpg" alt="" class="item-big__photo">
+                    <div class="item-big__logo item-small__logo-house"></div>
+                    <div class="item-big__company-wrapper flex">
+                        <div class="item-big__company">Vision Agency</div>
+                        <div class="item-big__rate item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item"></div>
+                            <div class="rate__number rate__number--white">(365)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-big__review-wrapper review flex">
+                    <div class="review__photo-wrapper">
+                        <img src="img/ava1.jpg" alt="" class="review__photo">
+                    </div>
+                    <div class="review__text">
+                        <div class="item-big__rate review__stars item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--big"></div>
+                            <div class="rate__item rate__item--big"></div>
+                        </div>
+                        <h2 class="review__name">Lucy-P</h2>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-big item-big">
+                <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
+                    <img src="img/big-music.jpg" alt="" class="item-big__photo">
+                    <div class="item-big__logo item-small__logo-music"></div>
+                    <div class="item-big__company-wrapper flex">
+                        <div class="item-big__company">SkyBox Club</div>
+                        <div class="item-big__rate item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__number rate__number--white">(1365)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-big__review-wrapper review flex">
+                    <div class="review__photo-wrapper">
+                        <img src="img/ava2.jpg" alt="" class="review__photo">
+                    </div>
+                    <div class="review__text">
+                        <div class="item-big__rate review__stars item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                        </div>
+                        <h2 class="review__name">Peter145</h2>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts__row flex flex-spa">
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
+                    <img src="img/small-house.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__price flex flex-h flex-v">$2,990</div>
+                    <div class="item-small__logo item-small__logo-house"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">2 bedroom house for rent in Dubai</div>
+                    <div class="item-small__company item-small__company--house">Vision Agency</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item"></div>
+                        <div class="rate__number">(365)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
+                    <img src="img/small-music.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__logo item-small__logo-music"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">Beach party festival 2014</div>
+                    <div class="item-small__company item-small__company--music">Long Beach</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__number">(1165)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
+                    <img src="img/small-bus.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__logo item-small__logo-bus"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">Aliquam quis pulvinar purus</div>
+                    <div class="item-small__company item-small__company--bus">Bus Trans</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__number">(365)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
+                    <img src="img/small-house1.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__price flex flex-h flex-v">$2,990</div>
+                    <div class="item-small__logo item-small__logo-house"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">4 bedroom house for rent in Dubai</div>
+                    <div class="item-small__company item-small__company--house">Reality Agency</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item"></div>
+                        <div class="rate__number">(165)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts__row flex flex-spa">
+            <div class="posts__item-big item-big">
+                <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
+                    <img src="img/big-music.jpg" alt="" class="item-big__photo">
+                    <div class="item-big__logo item-small__logo-music"></div>
+                    <div class="item-big__company-wrapper flex">
+                        <div class="item-big__company">SkyBox Club</div>
+                        <div class="item-big__rate item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__item rate__item--full"></div>
+                            <div class="rate__number rate__number--white">(1365)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-big__review-wrapper review flex">
+                    <div class="review__photo-wrapper">
+                        <img src="img/ava2.jpg" alt="" class="review__photo">
+                    </div>
+                    <div class="review__text">
+                        <div class="item-big__rate review__stars item-small__rate rate flex flex-v">
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                            <div class="rate__item rate__item--full rate__item--big"></div>
+                        </div>
+                        <h2 class="review__name">Peter145</h2>
+                        <p class="review__description">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci
+                            ornare. Duis mattis sagittis fringilla.” <a href="#" class="review__more">...read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
+                    <img src="img/small-bus.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__logo item-small__logo-bus"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">Aliquam quis pulvinar purus</div>
+                    <div class="item-small__company item-small__company--bus">Bus Trans</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__number">(365)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__item-small item-small">
+                <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
+                    <img src="img/small-house1.jpg" alt="" class="item-small__photo">
+                    <div class="item-small__price flex flex-h flex-v">$2,990</div>
+                    <div class="item-small__logo item-small__logo-house"></div>
+                </div>
+                <div class="item-small__description-wrapper flex flex-column flex-v">
+                    <div class="item-small__description">4 bedroom house for rent in Dubai</div>
+                    <div class="item-small__company item-small__company--house">Reality Agency</div>
+                    <div class="item-small__rate rate flex flex-v">
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item rate__item--full"></div>
+                        <div class="rate__item"></div>
+                        <div class="rate__number">(165)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts__load-wrapper flex flex-h">
+            <a href="#" class="posts__load-link">Load more...</a>
+        </div>
+    </div>
+</section>
+<section class="offer">
+    <div class="container ">
+        <div class="offer-wrapper flex flex-h flex-v flex-column">
+            <h1 class="offer__title">What can DuHoot offer to you?</h1>
+            <div class="offer__subtitle">Etiam cursus ipsum quis enim faucibus</div>
+            <div class="offer__items flex flex-h">
+                <div class="offer__item offer__item--active offer__item--home"></div>
+                <div class="offer__item offer__item--woman"></div>
+                <div class="offer__item offer__item--edu"></div>
+                <div class="offer__item offer__item--music"></div>
+                <div class="offer__item offer__item--bus"></div>
+            </div>
+            <h2 class="offer__name">Reality</h2>
+            <div class="offer__descriptions flex flex-h flex-v">
+                <div class="offer__description">
+                    <div class="offer__logo offer__logo--energy"></div>
+                    <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas
+                        vitae
+                        risus est. In hendrerit, massa at.
+                    </div>
+                </div>
+                <div class="offer__description">
+                    <div class="offer__logo offer__logo--leaf"></div>
+                    <div class="offer__text">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas
+                        vitae
+                        risus est. In hendrerit, massa at.
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,7 +406,7 @@
 </section>
 <footer class="footer">
     <div class="container flex-column flex flex-v">
-        <div class="footer__title">Subscribe to our newsletter</div>
+        <h1 class="footer__title">Subscribe to our newsletter</h1>
         <div class="footer__subscribe">
 
         </div>
