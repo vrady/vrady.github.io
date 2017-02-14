@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <title>DuHoot</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -50,18 +51,20 @@
     </div>
 </section>
 <section class="filter">
-    <div class="container flex flex-v">
+    <div class="container filter-wrapper flex flex-v">
         <div class="filter__bookmarks flex">
             <div class="filter__bookmark filter__bookmark--active">Recommended</div>
             <div class="filter__bookmark">Latest</div>
             <div class="filter__bookmark">Highlights</div>
         </div>
-        <div class="filter__city flex flex-h flex-v">
-            <select name="filter" id="" class="filter__city-select">
-                <option value="Dubai" selected>Dubai</option>
-            </select>
+        <div class="filter__buttons flex">
+            <div class="filter__city flex flex-h flex-v">
+                <select name="filter" id="" class="filter__city-select">
+                    <option value="Dubai" selected>Dubai</option>
+                </select>
+            </div>
+            <div class="filter__map flex flex-v flex-h">Show map</div>
         </div>
-        <div class="filter__map flex flex-v flex-h">Show map</div>
         <div class="filter__items flex flex-v">
             <div class="filter__bookmark">Filter:</div>
             <div class="filter__item filter__item--home filter__item--home-active"></div>
@@ -427,7 +430,7 @@
                 </div>
             </div>
         </form>
-        <div class="footer__menu flex">
+        <div class="footer__menu flex flex-spa">
             <div class="footer__column column">
                 <div class="column__title">Ipsum quis</div>
                 <div class="column__item">Lorem ipsum.</div>

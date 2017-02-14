@@ -113,6 +113,7 @@ body {
 }
 
 .search__title {
+    text-align: center;
     color: #fff;
     font-size: 30px;
     margin-bottom: 30px;
@@ -768,10 +769,6 @@ body {
     opacity: .1;
 }
 
-.footer__column {
-    margin-right: 210px;
-}
-
 .footer__column:last-child {
     margin-right: 0;
 }
@@ -822,4 +819,92 @@ body {
 
 .social__item--yt {
     content: url(img/yt.png);
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .header__right {
+        display: none;
+    }
+
+    .search__selects {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .search__select {
+        margin-bottom: 20px;
+    }
+
+    .search__input {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .filter {
+        height: auto;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .filter__bookmarks {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .filter__city {
+        margin-bottom: 10px;
+    }
+
+    .filter__map {
+        margin-right: 0;
+    }
+
+    .posts__row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .posts__item-small {
+        margin-bottom: 10px;
+    }
+
+    .posts__item-big {
+        margin-bottom: 10px;
+    }
+
+    .footer__subscribe {
+        width: 400px;
+    }
+
+    .subscribe-form__email-wrapper {
+        margin-left: 50px;
+    }
+
+    .offer__items {
+        flex-wrap: wrap;
+    }
+
+    .offer__item{
+         margin-bottom: 10px;
+    }
+
+    .offer__item:after {
+        display: none;
+    }
+
+    .offer__descriptions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .offer__description {
+        width: 100%;
+    }
 }
