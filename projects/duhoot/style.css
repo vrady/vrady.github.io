@@ -565,6 +565,7 @@ body {
 }
 
 .offer__title {
+    text-align: center;
     color: #566375;
     font-size: 22px;
     margin-bottom: 5px;
@@ -572,6 +573,7 @@ body {
 }
 
 .offer__subtitle {
+    text-align: center;
     color: #96a6a7;
     font-size: 16px;
     margin-bottom: 50px;
@@ -674,6 +676,7 @@ body {
 }
 
 .footer__title {
+    text-align: center;
     margin-top: 50px;
     margin-bottom: 40px;
     color: #fff;
@@ -769,15 +772,12 @@ body {
     opacity: .1;
 }
 
-.footer__column:last-child {
-    margin-right: 0;
-}
 
 .column__title {
     font-size: 16px;
     color: #fff;
     position: relative;
-    display: inline-block;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -799,10 +799,6 @@ body {
 
 .footer__social {
     margin-bottom: 60px;
-}
-
-.social__item {
-    margin-right: 20px;
 }
 
 .social__item--fb {
@@ -829,6 +825,11 @@ body {
         display: none;
     }
 
+    .search {
+        height: auto;
+        padding: 20px 0;
+    }
+
     .search__selects {
         flex-direction: column;
         align-items: center;
@@ -837,10 +838,11 @@ body {
 
     .search__select {
         margin-bottom: 20px;
+        margin-right: 0;
     }
 
     .search__input {
-        width: 400px;
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -877,10 +879,33 @@ body {
 
     .posts__item-big {
         margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .item-big__review-wrapper {
+        padding-bottom: 10px;
+    }
+
+    .item-big__photo {
+        width: 100%;
     }
 
     .footer__subscribe {
-        width: 400px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 70px;
+    }
+
+    .subscribe-form__email-wrapper::before {
+        top: 4px;
+    }
+
+    .subscribe-form__button-wrapper {
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        margin-left: -60px;
     }
 
     .subscribe-form__email-wrapper {
@@ -906,5 +931,19 @@ body {
 
     .offer__description {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer__menu {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .column {
+        margin-bottom: 10px;
     }
 }
