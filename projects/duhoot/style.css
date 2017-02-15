@@ -331,6 +331,7 @@ input:active, button:active, select:active {
 
 .posts__row {
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .posts__item-small {
@@ -1032,8 +1033,6 @@ input:active, button:active, select:active {
 
     .posts__item-big {
         margin-bottom: 10px;
-        width: 100%;
-        height: auto;
     }
 
     .item-big__review-wrapper {

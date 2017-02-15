@@ -94,7 +94,7 @@
 <section class="posts">
     <div class="container">
         <div class="posts__row flex flex-spa">
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__music">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
                     <img src="img/small-music.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-music"></div>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -168,9 +168,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="posts__row flex flex-spa">
-            <div class="posts__item-big item-big">
+            <div class="posts__item-big item-big posts__house">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--house flex">
                     <img src="img/big-house1.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-house"></div>
@@ -206,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-big item-big">
+            <div class="posts__item-big item-big posts__music">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
                     <img src="img/big-music.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-music"></div>
@@ -242,9 +240,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="posts__row flex flex-spa">
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -263,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__music">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
                     <img src="img/small-music.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-music"></div>
@@ -281,7 +277,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -299,7 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -318,9 +314,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="posts__row flex flex-spa">
-            <div class="posts__item-big item-big">
+            <div class="posts__item-big item-big posts__music">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
                     <img src="img/big-music.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-music"></div>
@@ -356,7 +350,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -374,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small">
+            <div class="posts__item-small item-small posts__house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -484,6 +478,36 @@
             $(this).toggleClass('hamburger__toggle--open');
             $('.hamburger__list').toggleClass('hamburger__list--active');
         });
+
+        $('.filter__item--home').click(function () {
+            if($(this).hasClass('filter__item--home-active')) {
+                $('.posts__house').hide(500);
+                $(this).toggleClass('filter__item--home-active');
+            }else {
+                $('.posts__house').show(500);
+                $(this).toggleClass('filter__item--home-active');
+            }
+        })
+
+        $('.filter__item--music').click(function () {
+            if($(this).hasClass('filter__item--music-active')) {
+                $('.posts__music').hide(500);
+                $(this).toggleClass('filter__item--music-active');
+            }else {
+                $('.posts__music').show(500);
+                $(this).toggleClass('filter__item--music-active');
+            }
+        })
+
+        $('.filter__item--bus').click(function () {
+            if($(this).hasClass('filter__item--bus-active')) {
+                $('.posts__bus').hide(500);
+                $(this).toggleClass('filter__item--bus-active');
+            }else {
+                $('.posts__bus').show(500);
+                $(this).toggleClass('filter__item--bus-active');
+            }
+        })
     })
 </script>
 </body>
