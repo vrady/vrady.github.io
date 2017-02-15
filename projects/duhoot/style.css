@@ -845,6 +845,52 @@ input:active, button:active, select:active {
     content: url(img/yt.png);
 }
 
+.hamburger__list {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 1;
+    transition: .2s;
+}
+
+.hamburger__list--active {
+    opacity: 0;
+    z-index: -1;
+}
+
+.hamburger__item {
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.hamburger__item-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.hamburger__item-link:hover {
+    color: #8d8d8d;
+}
+
+.hamburger__toggle {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.hamburger__toggle:hover {
+    color: #7d7d7d;
+    transition: .2s;
+}
+
 @media only screen and (max-width: 480px) {
     .container {
         width: 100%;
@@ -862,51 +908,6 @@ input:active, button:active, select:active {
         display: block;
     }
 
-    .hamburger__list {
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        opacity: 1;
-        z-index: 1;
-        transition: .2s;
-    }
-
-    .hamburger__list--active {
-        opacity: 0;
-        z-index: -1;
-    }
-
-    .hamburger__item {
-        list-style: none;
-        text-align: center;
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 5px 0;
-    }
-
-    .hamburger__item-link {
-        text-decoration: none;
-        color: #000;
-    }
-    
-    .hamburger__item-link:hover {
-        color: #8d8d8d;
-    }
-
-    .hamburger__toggle {
-        padding: 10px;
-        border-radius: 8px;
-        font-size: 30px;
-        text-decoration: none;
-        color: #000;
-    }
-    
-    .hamburger__toggle:hover {
-        color: #7d7d7d;
-        transition: .2s;
-    }
 
     .search {
         height: auto;
@@ -1027,6 +1028,134 @@ input:active, button:active, select:active {
     }
 
     .column {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .header__right {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: block;
+    }
+
+    .filter {
+        height: auto;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .filter__bookmarks {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .filter__city {
+        margin-bottom: 10px;
+    }
+
+    .filter__map {
+        margin-right: 0;
+    }
+
+    .posts__row {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .posts__item-small {
+        margin-bottom: 10px;
+    }
+
+    .posts__item-big {
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .offer__items {
+        flex-wrap: wrap;
+    }
+
+    .offer__item:after {
+        display: none;
+    }
+
+    .offer__descriptions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .offer__description {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width : 1020px) {
+    .container {
+        width: 100%;
+    }
+
+    .nav__item {
+        font-size: 13px;
+        padding: 20px 8px;
+    }
+
+    .header__login {
+        padding: 20px 20px;
+    }
+
+    .header__container {
+        padding-right: 0;
+    }
+
+    .filter {
+        height: auto;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .filter__bookmarks {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .filter__city {
+        margin-bottom: 10px;
+    }
+
+    .filter__map {
+        margin-right: 0;
+    }
+
+    .posts__row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .posts__item-small {
+        margin-bottom: 10px;
+    }
+
+    .posts__item-big {
         margin-bottom: 10px;
     }
 }
