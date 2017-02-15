@@ -28,7 +28,11 @@
             </div>
         </div>
         <div class="header__hamburger hamburger">
-            <a href="#" class="hamburger__toggle">☰</a>
+            <div class="hamburger__toggle">
+                <span class="hamburger__span"></span>
+                <span class="hamburger__span"></span>
+                <span class="hamburger__span"></span>
+            </div>
             <ul class="hamburger__list hamburger__list--active">
                 <li class="hamburger__item"><a href="#" class="hamburger__item-link">Reality</a></li>
                 <li class="hamburger__item"><a href="#" class="hamburger__item-link">Living</a></li>
@@ -475,11 +479,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('.hamburger__toggle').click(function (e) {
-            $(this).toggleClass('active');
+
+        $('.hamburger__toggle').click(function(){
+            $(this).toggleClass('hamburger__toggle--open');
             $('.hamburger__list').toggleClass('hamburger__list--active');
-            e.preventDefault();
-        })
+        });
     })
 </script>
 </body>
