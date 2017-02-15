@@ -11,6 +11,10 @@ body {
     background: #f3f1f2;
 }
 
+input:active, button:active, select:active {
+    outline: none;
+}
+
 .container {
     max-width: 1280px;
     min-width: 320px;
@@ -57,16 +61,26 @@ body {
     justify-content: space-between;
 }
 
+.header__right {
+    opacity: 1;
+    z-index: 1;
+    transition: .2s;
+}
+
 .nav__item {
     list-style: none;
     font-size: 14px;
     text-transform: uppercase;
-    color: #96a6a7;
     padding: 20px 11px;
     cursor: pointer;
 }
 
-.nav__item:hover {
+.nav__item-link {
+    text-decoration: none;
+    color: #96a6a7;
+}
+
+.nav__item-link:hover {
     color: #b1c7d5;
     transition: .2s;
 }
@@ -121,6 +135,9 @@ body {
     color: #fff;
     font-size: 30px;
     margin-bottom: 30px;
+}
+.search__button-wrapper:focus {
+    outline: none;
 }
 
 .search__button {
@@ -227,6 +244,10 @@ body {
     margin-right: 10px;
 }
 
+.filter__city:focus {
+    outline: none;
+}
+
 .filter__city-select {
     margin: 0 10px;
     width: 100%;
@@ -235,6 +256,7 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .filter__city-select:focus {
@@ -253,6 +275,10 @@ body {
     color: #96a6a7;
 }
 
+.filter__map:focus {
+    outline: none;
+}
+
 .filter__map:hover {
     background-color: #1baf5d;
     border: 1px solid #1baf5d;
@@ -266,6 +292,10 @@ body {
     margin-right: 9px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.filter__item:focus {
+    outline: none;
 }
 
 .filter__item--home {
@@ -831,9 +861,11 @@ body {
     }
 
     .header__right {
-        display: none;
+        opacity: 0;
+        width: 0;
+        z-index: -1;
     }
-    
+
     .header__hamburger {
         display: block;
     }
@@ -844,10 +876,14 @@ body {
         top: 100%;
         left: 0;
         background-color: #fff;
+        opacity: 1;
+        z-index: 1;
+        transition: .2s;
     }
 
     .hamburger__list--active {
-        display: none;
+        opacity: 0;
+        z-index: -1;
     }
 
     .hamburger__item {
@@ -857,15 +893,20 @@ body {
         cursor: pointer;
         padding: 5px 0;
     }
+
+    .hamburger__item-link {
+        text-decoration: none;
+        color: #000;
+    }
     
-    .hamburger__item:hover {
+    .hamburger__item-link:hover {
         color: #8d8d8d;
     }
 
     .hamburger__toggle {
         padding: 20px;
         border-radius: 8px;
-        font-size: 20px;
+        font-size: 30px;
         text-decoration: none;
         color: #000;
     }
