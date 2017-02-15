@@ -1082,8 +1082,6 @@ input:active, button:active, select:active {
 
     .posts__item-big {
         margin-bottom: 10px;
-        width: 100%;
-        height: auto;
     }
 
     .offer__items {
