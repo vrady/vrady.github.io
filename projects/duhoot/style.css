@@ -61,12 +61,6 @@ input:active, button:active, select:active {
     justify-content: space-between;
 }
 
-.header__right {
-    opacity: 1;
-    z-index: 1;
-    transition: .2s;
-}
-
 .nav__item {
     list-style: none;
     font-size: 14px;
@@ -861,9 +855,7 @@ input:active, button:active, select:active {
     }
 
     .header__right {
-        opacity: 0;
-        width: 0;
-        z-index: -1;
+        display: none;
     }
 
     .header__hamburger {
@@ -904,7 +896,7 @@ input:active, button:active, select:active {
     }
 
     .hamburger__toggle {
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
         font-size: 30px;
         text-decoration: none;
