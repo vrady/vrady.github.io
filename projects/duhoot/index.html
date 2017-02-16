@@ -83,18 +83,18 @@
         </div>
         <div class="filter__items flex flex-v">
             <div class="filter__bookmark">Filter:</div>
-            <div class="filter__item filter__item--home filter__item--home-active"></div>
+            <div class="filter__item filter__item--home filter__item--active" data-filter="house"></div>
             <div class="filter__item filter__item--woman"></div>
             <div class="filter__item filter__item--edu"></div>
-            <div class="filter__item filter__item--music filter__item--music-active"></div>
-            <div class="filter__item filter__item--bus filter__item--bus-active"></div>
+            <div class="filter__item filter__item--music filter__item--active" data-filter="music"></div>
+            <div class="filter__item filter__item--bus filter__item--active" data-filter="bus"></div>
         </div>
     </div>
 </section>
 <section class="posts">
     <div class="container">
         <div class="posts__row flex flex-spa">
-            <div class="posts__item-small item-small posts__house">
+            <div class="posts__item posts__item-small item-small" data-type="house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__music">
+            <div class="posts__item posts__item-small item-small posts__music" data-type="music">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
                     <img src="img/small-music.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-music"></div>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__bus">
+            <div class="posts__item posts__item-small item-small" data-type="bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__house">
+            <div class="posts__item posts__item-small item-small" data-type="house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -168,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-big item-big posts__house">
+            <div class="posts__item posts__item-big item-big" data-type="house">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--house flex">
                     <img src="img/big-house1.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-house"></div>
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-big item-big posts__music">
+            <div class="posts__item posts__item-big item-big" data-type="music">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
                     <img src="img/big-music.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-music"></div>
@@ -240,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__house">
+            <div class="posts__item posts__item-small item-small" data-type="house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -259,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__music">
+            <div class="posts__item posts__item-small item-small" data-type="music">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--music flex-h flex">
                     <img src="img/small-music.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-music"></div>
@@ -277,7 +277,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__bus">
+            <div class="posts__item posts__item-small item-small" data-type="bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -295,7 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__house">
+            <div class="posts__item posts__item-small item-small" data-type="house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -314,7 +314,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-big item-big posts__music">
+            <div class="posts__item posts__item-big item-big" data-type="music">
                 <div class="item-big__photo-wrapper item-small__photo-wrapper--music flex">
                     <img src="img/big-music.jpg" alt="" class="item-big__photo">
                     <div class="item-big__logo item-small__logo-music"></div>
@@ -350,7 +350,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__bus">
+            <div class="posts__item posts__item-small item-small" data-type="bus">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--bus flex-h flex">
                     <img src="img/small-bus.jpg" alt="" class="item-small__photo">
                     <div class="item-small__logo item-small__logo-bus"></div>
@@ -368,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            <div class="posts__item-small item-small posts__house">
+            <div class="posts__item posts__item-small item-small" data-type="house">
                 <div class="item-small__photo-wrapper item-small__photo-wrapper--house flex-h flex">
                     <img src="img/small-house1.jpg" alt="" class="item-small__photo">
                     <div class="item-small__price flex flex-h flex-v">$2,990</div>
@@ -471,44 +471,6 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-        $('.hamburger__toggle').click(function(){
-            $(this).toggleClass('hamburger__toggle--open');
-            $('.hamburger__list').toggleClass('hamburger__list--active');
-        });
-
-        $('.filter__item--home').click(function () {
-            if($(this).hasClass('filter__item--home-active')) {
-                $('.posts__house').hide(500);
-                $(this).toggleClass('filter__item--home-active');
-            }else {
-                $('.posts__house').show(500);
-                $(this).toggleClass('filter__item--home-active');
-            }
-        })
-
-        $('.filter__item--music').click(function () {
-            if($(this).hasClass('filter__item--music-active')) {
-                $('.posts__music').hide(500);
-                $(this).toggleClass('filter__item--music-active');
-            }else {
-                $('.posts__music').show(500);
-                $(this).toggleClass('filter__item--music-active');
-            }
-        })
-
-        $('.filter__item--bus').click(function () {
-            if($(this).hasClass('filter__item--bus-active')) {
-                $('.posts__bus').hide(500);
-                $(this).toggleClass('filter__item--bus-active');
-            }else {
-                $('.posts__bus').show(500);
-                $(this).toggleClass('filter__item--bus-active');
-            }
-        })
-    })
-</script>
+<script src="script.js"></script>
 </body>
 </html>

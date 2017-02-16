@@ -297,7 +297,7 @@ input:active, button:active, select:active {
     background-size: 24px;
 }
 
-.filter__item--home-active {
+.filter__item--home.filter__item--active {
     background-color: #1baf5d;
 }
 
@@ -316,7 +316,7 @@ input:active, button:active, select:active {
     background-size: 19px;
 }
 
-.filter__item--music-active {
+.filter__item--music.filter__item--active{
     background-color: #f19e1f;
 }
 
@@ -325,7 +325,7 @@ input:active, button:active, select:active {
     background-size: 18px;
 }
 
-.filter__item--bus-active {
+.filter__item--bus.filter__item--active {
     background-color: #88499c;
 }
 
