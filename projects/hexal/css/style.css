@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Maven+Pro');
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Maven Pro', sans-serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-v {
+    align-items: center;
+}
+
+.flex-h {
+    justify-content: center;
+}
+
+.flex-spb {
+    justify-content: space-between;
+}
+
+.flex-spa {
+    justify-content: space-around;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.container {
+  max-width: 1020px;
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/*HEADER*/
+
+.header {
+  height: 63px;
+  background-color: #323232;
+  margin-bottom: 90px;
+}
+
+.header__item {
+  list-style: none;
+}
+
+.header__item-link {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 15px;
+  transition: .2s;
+}
+
+.header__item-link:hover {
+  color: #2eb398;
+  transition: .2s;
+}
+
+.header__logo-wrapper {
+  position: relative;
+  align-items: flex-end;
+}
+
+.header__logo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+	left: 50%;
+  margin-left: -45px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 26px 45px 0 45px;
+  border-color: #323232 transparent transparent transparent;
+}
+
+/*HEADER*/
+
+/*portfolio*/
+
+.portfolio {
+  margin-bottom: 11px;
+}
+
+.portfolio-wrapper {
+  border-bottom: 1px solid #e4e9eb;
+}
+
+.portfolio__pagination {
+  margin-bottom: 11px;
+}
+
+.pagination__item {
+  width: 6px;
+  height: 6px;
+  background-color: #ddd2c5;
+  cursor: pointer;
+  transition: .2s;
+  margin-right: 3px;
+}
+
+.pagination__item--active {
+  background-color: #8b8784;
+}
+
+.pagination__item:hover {
+  background-color: #8b8784;
+  transition: .2s;
+}
+
+/*portfolio*/
+
+/*about*/
+
+.about {
+  background-color: #2eb398;
+}
+
+.about-wrapper {
+  padding: 68px 100px;
+  align-content: flex-start;
+}
+
+.about__photo-wrapper {
+  margin-right: 20px;
+}
+
+.about__description {
+  position: relative;
+}
+
+.about__name {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #d7fcf5;
+}
+
+.about__job {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #20816d;
+  margin-bottom: 10px;
+}
+
+.about__text {
+  font-size: 12px;
+  color: #d7fcf5;
+  line-height: 21px;
+}
+
+.about__social {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.social__item {
+  width: 25px;
+  height: 25px;
+  background-color: #a5dbd4;
+  border: 1px solid #a6dbd5;
+}
+
+.social__link {
+  transition: .2s;
+  color: #03ac95;
+}
+
+.social__item:hover {
+  background-color: #7ed0c5;
+  border: 1px solid #7ed0c5;
+  transition: .2s;
+}
+
+/*about*/
+
+/*feedback*/
+
+.feedback {
+  background-color: #323232;
+}
+
+.feedback-wrapper {
+  padding: 70px 90px;
+}
+
+.feedback__title {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+.feedback__subtitle {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #bebebe;
+  margin-bottom: 15px;
+}
+
+.feedback__form-wrapper {
+  width: 75%;
+  margin-right: 20px;
+}
+
+.feedback__info-wrapper {
+  width: 25%;
+}
+
+.feedback__input {
+  height: 38px;
+  width: 100%;
+  background-color: #454545;
+  border: none;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #bebebe;
+  padding: 0 15px;
+}
+
+.feedback__input::placeholder {
+  color: #bebebe;
+}
+
+.feedback__input:focus {
+  outline: none;
+}
+
+.feedback__input:active {
+  outline: none;
+}
+
+.feedback__textarea {
+  padding: 15px 15px;
+  height: 150px;
+  resize: none;
+}
+
+.feedback__button {
+  width: 90px;
+  height: 37px;
+  border: none;
+  background-color: #2eb398;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #d7fcf5;
+  cursor: pointer;
+  float: right;
+  transition: .2s;
+}
+
+.feedback__button:hover {
+  background-color: #279b83;
+  transition: .2s;
+}
+
+.feedback__about {
+  font-size: 12px;
+  line-height: 21px;
+  color: #bebebe;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.feedback__about--bold {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.feedback__contact {
+  font-size: 12px;
+  font-weight: bold;
+  color: #bebebe;
+}
+
+.feedback__contact-icon {
+  color: #2eb398;
+  margin-right: 5px;
+}
+
+/*feedback*/
+
+/*footer*/
+
+.footer {
+  background-color: #222222;
+  height: 40px;
+}
+
+.footer__text {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454545;
+}
+
+/*footer*/
