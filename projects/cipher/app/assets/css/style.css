@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 320px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-v {
+    align-items: center;
+}
+
+.flex-h {
+    justify-content: center;
+}
+
+.flex-spb {
+    justify-content: space-between;
+}
+
+.flex-spa {
+    justify-content: space-around;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.cipher {
+  margin-top: 50px;
+}
+
+.cipher__textarea {
+  border: none;
+  resize: none;
+  background-color: rgba(69,69,69,.5);
+  color: #000;
+  padding: 20px;
+  width: 70%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.cipher__textarea::-webkit-input-placeholder {
+  color: rgb(0,0,0);
+}
+
+.cipher__textarea::-moz-placeholder {
+  color: rgb(0,0,0);
+}
+
+.cipher__textarea::-ms-input-placeholder {
+  color: rgb(0,0,0);
+}
+
+.cipher__textarea:focus {
+  outline: none;
+}
+
+.cipher__menu-wrapper {
+  flex-wrap: wrap;
+}
+
+.cipher__menu-item {
+  background-color: rgba(69,69,69,.5);
+  color: #000;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  margin: 5px 5px;
+}
+
+.cipher__key {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cipher__key::-webkit-inner-spin-button,
+.cipher__key::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cipher__key::-webkit-input-placeholder {
+  color: #000;
+}
+
+.cipher__key:focus {
+  outline: none;
+}
+
+.cipher__button {
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .2s;
+  border-radius: 10px;
+}
+
+.cipher__button:hover {
+  background-color: #585858;
+  transition: .2s;
+}

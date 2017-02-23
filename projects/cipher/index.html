@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cryptographyApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cryptography App</title>
+  <link rel="stylesheet" href="app/assets/css/style.css">
+</head>
+<body>
+  <section class="cipher" ng-controller="CryptographyController as crypt">
+    <div class="container">
+      <form class="cipher__form flex flex-h flex-v flex-column">
+        <textarea ng-model="crypt.input" name="textarea" rows="8" cols="80"
+        class="cipher__textarea" placeholder="Input text" required></textarea>
+        <div class="cipher__menu-wrapper flex flex-h">
+          <select ng-model="crypt.method" class="cipher__menu-item cipher__button">
+            <option value="" disabled>Choose method</option>
+            <option ng-repeat="method in crypt.methods" ng-value="method.value">{{method.name}}</option>
+          </select>
+          <input ng-model="crypt.key" type="number" class="cipher__menu-item cipher__key" placeholder="Key" required>
+          <button ng-click="crypt.encrypt()" class="cipher__menu-item cipher__button">Encrypt</button>
+          <button ng-click="crypt.decrypt()" class="cipher__menu-item cipher__button">Decrypt</button>
+          <input type="file" on-read-file="crypt.openFile($fileContent)" class="cipher__menu-item cipher__button cipher__file-button" accept="text/plain">
+          <button ng-click="crypt.donwload()" class="cipher__menu-item cipher__button">Save</button>
+          <button ng-click="crypt.clear()" class="cipher__menu-item cipher__button">New</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="app/assets/js/angular.min.js" type="text/javascript"></script>
+  <script src="app/assets/js/angular-file-saver.bundle.js" type="text/javascript"></script>
+  <script src="app/app.js" type="text/javascript"></script>
+  <script src="app/controllers/CryptographyController.js" type="text/javascript"></script>
+  <script src="app/services/CipherFactory.js" type="text/javascript"></script>
+  <script src="app/services/CaesarService.js" type="text/javascript"></script>
+  <script src="app/services/TrithemiusService.js" type="text/javascript"></script>
+  <script src="app/directives/onReadFile.js" type="text/javascript"></script>
+</body>
+</html>
