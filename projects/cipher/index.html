@@ -6,29 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cryptography App</title>
   <link rel="stylesheet" href="app/assets/css/style.css">
+  <link rel="stylesheet" href="app/assets/css/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
 <body>
   <section class="cipher" ng-controller="CryptographyController as crypt">
     <div class="container">
-      <form class="cipher__form flex flex-h flex-v flex-column">
-        <textarea ng-model="crypt.input" name="textarea" rows="8" cols="80"
-        class="cipher__textarea" placeholder="Input text" required></textarea>
-        <div class="cipher__menu-wrapper flex flex-h">
-          <select ng-model="crypt.method" class="cipher__menu-item cipher__button">
-            <option value="" disabled>Choose method</option>
-            <option ng-repeat="method in crypt.methods" ng-value="method.value">{{method.name}}</option>
-          </select>
-          <input ng-model="crypt.key" type="number" class="cipher__menu-item cipher__key" placeholder="Key" required>
-          <button ng-click="crypt.encrypt()" class="cipher__menu-item cipher__button">Encrypt</button>
-          <button ng-click="crypt.decrypt()" class="cipher__menu-item cipher__button">Decrypt</button>
-          <input type="file" on-read-file="crypt.openFile($fileContent)" class="cipher__menu-item cipher__button cipher__file-button" accept="text/plain">
-          <button ng-click="crypt.donwload()" class="cipher__menu-item cipher__button">Save</button>
-          <button ng-click="crypt.clear()" class="cipher__menu-item cipher__button">New</button>
-        </div>
-      </form>
+      <div class="flex flex-h">
+        <md-input-container>
+          <label>Input text</label>
+          <textarea ng-model="crypt.input" rows="8" cols="100"></textarea>
+        </md-input-container>
+      </div>
+      <div layout-gt-sm="row" class="flex flex-h">
+        <md-input-container>
+          <label>Method</label>
+          <md-select ng-model="crypt.method">
+            <md-option ng-repeat="method in crypt.methods" ng-value="method.value">
+              {{method.name}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>Key</label>
+          <input type="number" ng-model="crypt.key">
+        </md-input-container>
+      </div>
+      <div layout-gt-sm="row" class="flex flex-h flex-w">
+        <md-button ng-disabled="!crypt.input || !crypt.method || !crypt.key" ng-click="crypt.encrypt()" class="md-raised">Encrypt</md-button>
+        <md-button ng-disabled="!crypt.input || !crypt.method || !crypt.key" ng-click="crypt.decrypt()" class="md-raised">Decrypt</md-button>
+        <input on-read-file="crypt.openFile($fileContent)" id="fileInput" type="file" class="ng-hide" accept="text/plain">
+        <md-button class="md-raised">
+          <label for="fileInput">Open</label>
+        </md-button>
+        <md-button ng-disabled="!crypt.input" ng-click="crypt.download()" class="md-raised">Save</md-button>
+        <md-button ng-disabled="!crypt.input && !crypt.method && !crypt.key" ng-click="crypt.clear()" class="md-raised">New</md-button>
+      </div>
     </div>
   </section>
   <script src="app/assets/js/angular.min.js" type="text/javascript"></script>
+  <script src="app/assets/js/angular-aria.min.js"></script>
+  <script src="app/assets/js/angular-animate.min.js"></script>
+  <script src="app/assets/js/angular-material.min.js"></script>
   <script src="app/assets/js/angular-file-saver.bundle.js" type="text/javascript"></script>
   <script src="app/app.js" type="text/javascript"></script>
   <script src="app/controllers/CryptographyController.js" type="text/javascript"></script>

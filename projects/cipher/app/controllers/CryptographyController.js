@@ -23,16 +23,12 @@ function CryptographyController($scope, Cipher, Caesar, Trithemius, FileSaver, B
   }
 
   function checking() {
-    if (Cipher.formCheck(that.input, that.key, that.method)) {
-      if (Cipher.keyCheck(that.key)) {
-        if (Cipher.symbolCheck(that.input)) {
-          return true;
-        }
-      } else {
-        alert('Wrong key');
+    if (Cipher.keyCheck(that.key)) {
+      if (Cipher.symbolCheck(that.input)) {
+        return true;
       }
     } else {
-      alert('Empty input or key or method');
+      alert('Wrong key');
     }
   }
 
@@ -43,9 +39,10 @@ function CryptographyController($scope, Cipher, Caesar, Trithemius, FileSaver, B
   this.clear = () => {
     this.input = null;
     this.key = null;
+    this.method = null;
   }
 
-  this.donwload = () => {
+  this.download = () => {
     let data = new Blob([that.input], { type: 'text/plain;charset=utf-8' });
     FileSaver.saveAs(data, 'text.txt');
   }

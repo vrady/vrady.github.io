@@ -19,7 +19,8 @@ function Trithemius(Alphabet) {
     }
     let output = '';
     for (let i = 0; i < input.length; i++) {
-      output += Alphabet.ALPHABET.charAt((((Alphabet.ALPHABET.indexOf(input.charAt(i)) + key) % power)
+      output += Alphabet.ALPHABET.charAt((((Alphabet
+        .ALPHABET.indexOf(input.charAt(i)) + key) % power)
        + power) % power);
     }
     return output;

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  let app = angular.module('cryptographyApp', ['ngFileSaver']);
+  let app = angular.module('cryptographyApp', ['ngFileSaver', 'ngMaterial']);
 
   app.constant('Alphabet', {
     ALPHABET : `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯҐЄІЇабвгдеёжзийклмнопрстуфхцчшщъыьэюяґєії0123456789 .,!?()\n`

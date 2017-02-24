@@ -21,9 +21,6 @@ function Cipher(Alphabet) {
     },
     keyCheck: (key) => {
       return key < Number.MAX_SAFE_INTEGER && key > Number.MIN_SAFE_INTEGER;
-    },
-    formCheck: (input, key, method) => {
-      return input && key && method;
     }
   }
 }
