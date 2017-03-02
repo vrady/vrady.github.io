@@ -1,26 +1,36 @@
 <md-content class="md-padding">
-  <div class="container">
-    <div class="flex flex-h">
-      <md-input-container>
-        <label>Input text</label>
-        <textarea ng-model="caesar.input" rows="8" cols="100"></textarea>
-      </md-input-container>
+    <div class="container">
+        <div class="flex flex-h">
+            <span class="md-headline">Caesar Method</span>
+        </div>
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="caesar.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h">
+            <md-input-container>
+                <label>Key</label>
+                <input type="number" ng-model="caesar.key">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!caesar.input || !caesar.key" ng-click="caesar.encrypt()" class="md-raised">
+                Encrypt
+            </md-button>
+            <md-button ng-disabled="!caesar.input || !caesar.key" ng-click="caesar.decrypt()" class="md-raised">
+                Decrypt
+            </md-button>
+            <input on-read-file="caesar.openFile($fileContent)" id="fileInput" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput">Open</label>
+            </md-button>
+            <md-button ng-disabled="!caesar.input" ng-click="caesar.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!caesar.input && !caesar.method && !caesar.key" ng-click="caesar.clear()"
+                       class="md-raised">New
+            </md-button>
+        </div>
     </div>
-    <div layout-gt-sm="row" class="flex flex-h">
-      <md-input-container>
-        <label>Key</label>
-        <input type="number" ng-model="caesar.key">
-      </md-input-container>
-    </div>
-    <div layout-gt-sm="row" class="flex flex-h flex-w">
-      <md-button ng-disabled="!caesar.input || !caesar.key" ng-click="caesar.encrypt()" class="md-raised">Encrypt</md-button>
-      <md-button ng-disabled="!caesar.input || !caesar.key" ng-click="caesar.decrypt()" class="md-raised">Decrypt</md-button>
-      <input on-read-file="caesar.openFile($fileContent)" id="fileInput" type="file" class="ng-hide" accept="text/plain">
-      <md-button class="md-raised">
-        <label for="fileInput">Open</label>
-      </md-button>
-      <md-button ng-disabled="!caesar.input" ng-click="caesar.download()" class="md-raised">Save</md-button>
-      <md-button ng-disabled="!caesar.input && !caesar.method && !caesar.key" ng-click="caesar.clear()" class="md-raised">New</md-button>
-    </div>
-  </div>
 </md-content>
