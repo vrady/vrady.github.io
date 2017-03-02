@@ -1,0 +1,54 @@
+<md-content class="md-padding">
+    <div class="container">
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="trithemius.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h">
+            <md-input-container>
+                <label>Method</label>
+                <md-select ng-model="trithemius.method">
+                    <md-option ng-repeat="method in trithemius.methods" ng-value="method.value">
+                        {{method.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 1">
+                <label>Param A</label>
+                <input type="number" ng-model="trithemius.paramA">
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 1">
+                <label>Param B</label>
+                <input type="number" ng-model="trithemius.paramB">
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 2">
+                <label>Param A</label>
+                <input type="number" ng-model="trithemius.paramA">
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 2">
+                <label>Param B</label>
+                <input type="number" ng-model="trithemius.paramB">
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 2">
+                <label>Param C</label>
+                <input type="number" ng-model="trithemius.paramC">
+            </md-input-container>
+            <md-input-container ng-if="trithemius.method === 3">
+                <label>Symbol</label>
+                <input maxlength="1" ng-model="trithemius.symbolToken">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!trithemius.input" ng-click="trithemius.encrypt()" class="md-raised">Encrypt</md-button>
+            <md-button ng-disabled="!trithemius.input" ng-click="trithemius.decrypt()" class="md-raised">Decrypt</md-button>
+            <input on-read-file="trithemius.openFile($fileContent)" id="fileInput1" type="file" class="ng-hide" accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput1">Open</label>
+            </md-button>
+            <md-button ng-disabled="!trithemius.input" ng-click="trithemius.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!trithemius.input && !trithemius.method && !trithemius.key" ng-click="trithemius.clear()" class="md-raised">New</md-button>
+        </div>
+    </div>
+</md-content>

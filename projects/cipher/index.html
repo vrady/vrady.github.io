@@ -1,60 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="cryptographyApp">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cryptography App</title>
-  <link rel="icon" type="image/png" href="app/assets/img/favicon.png">
-  <link rel="stylesheet" href="app/assets/css/style.css">
-  <link rel="stylesheet" href="app/assets/css/angular-material.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cryptography App</title>
+    <link rel="icon" type="image/png" href="app/assets/img/favicon.png">
+    <link rel="stylesheet" href="app/assets/css/style.css">
+    <link rel="stylesheet" href="app/assets/css/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
 <body>
-  <section class="cipher" ng-controller="CryptographyController as crypt">
-    <div class="container">
-      <div class="flex flex-h">
-        <md-input-container>
-          <label>Input text</label>
-          <textarea ng-model="crypt.input" rows="8" cols="100"></textarea>
-        </md-input-container>
-      </div>
-      <div layout-gt-sm="row" class="flex flex-h">
-        <md-input-container>
-          <label>Method</label>
-          <md-select ng-model="crypt.method">
-            <md-option ng-repeat="method in crypt.methods" ng-value="method.value">
-              {{method.name}}
-            </md-option>
-          </md-select>
-        </md-input-container>
-        <md-input-container>
-          <label>Key</label>
-          <input type="number" ng-model="crypt.key">
-        </md-input-container>
-      </div>
-      <div layout-gt-sm="row" class="flex flex-h flex-w">
-        <md-button ng-disabled="!crypt.input || !crypt.method || !crypt.key" ng-click="crypt.encrypt()" class="md-raised">Encrypt</md-button>
-        <md-button ng-disabled="!crypt.input || !crypt.method || !crypt.key" ng-click="crypt.decrypt()" class="md-raised">Decrypt</md-button>
-        <input on-read-file="crypt.openFile($fileContent)" id="fileInput" type="file" class="ng-hide" accept="text/plain">
-        <md-button class="md-raised">
-          <label for="fileInput">Open</label>
-        </md-button>
-        <md-button ng-disabled="!crypt.input" ng-click="crypt.download()" class="md-raised">Save</md-button>
-        <md-button ng-disabled="!crypt.input && !crypt.method && !crypt.key" ng-click="crypt.clear()" class="md-raised">New</md-button>
-      </div>
-    </div>
-  </section>
-  <script src="app/assets/js/angular.min.js" ></script>
-  <script src="app/assets/js/angular-aria.min.js"></script>
-  <script src="app/assets/js/angular-animate.min.js"></script>
-  <script src="app/assets/js/angular-material.min.js"></script>
-  <script src="app/assets/js/angular-file-saver.bundle.js"></script>
-  <script src="app/app.js"></script>
-  <script src="app/controllers/CryptographyController.js"></script>
-  <script src="app/services/CipherFactory.js"></script>
-  <script src="app/services/CaesarService.js"></script>
-  <script src="app/services/TrithemiusService.js"></script>
-  <script src="app/directives/onReadFile.js"></script>
+<section class="cipher">
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="lab1">
+                <caesar></caesar>
+            </md-tab>
+            <md-tab label="lab2">
+                <trithemius></trithemius>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</section>
+<script src="app/assets/js/angular.min.js"></script>
+<script src="app/assets/js/angular-aria.min.js"></script>
+<script src="app/assets/js/angular-animate.min.js"></script>
+<script src="app/assets/js/angular-material.min.js"></script>
+<script src="app/assets/js/angular-file-saver.bundle.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/CryptographyController.js"></script>
+<script src="app/services/CipherFactory.js"></script>
+<script src="app/services/CaesarService.js"></script>
+<script src="app/services/TrithemiusService.js"></script>
+<script src="app/directives/onReadFile.js"></script>
+<script src="app/directives/CaesarDirective.js"></script>
+<script src="app/directives/TrithemiusDirective.js"></script>
 </body>
 </html>
