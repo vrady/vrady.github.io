@@ -15,7 +15,7 @@ function TrithemiusController(Cipher, Trithemius, FileSaver, Blob) {
     that.methods = [
         {name: 'Linear', value: 1},
         {name: 'Quadratic', value: 2},
-        {name: 'Symbol', value: 3}
+        {name: 'Slogan', value: 3}
     ];
 
     that.encrypt = () => {
@@ -27,7 +27,7 @@ function TrithemiusController(Cipher, Trithemius, FileSaver, Blob) {
                 that.input = Trithemius.encrypt(that.input, that.paramA, that.paramB, that.paramC);
             }
             if (that.method === 3) {
-                that.input = Trithemius.encrypt(that.input, that.symbolToken);
+                that.input = Trithemius.encrypt(that.input, that.slogan);
             }
         }
     };
@@ -41,7 +41,7 @@ function TrithemiusController(Cipher, Trithemius, FileSaver, Blob) {
                 that.input = Trithemius.decrypt(that.input, that.paramA, that.paramB, that.paramC);
             }
             if (that.method === 3) {
-                that.input = Trithemius.decrypt(that.input, that.symbolToken);
+                that.input = Trithemius.decrypt(that.input, that.slogan);
             }
         }
     };
@@ -67,14 +67,7 @@ function TrithemiusController(Cipher, Trithemius, FileSaver, Blob) {
             } else return true;
         }
         if (that.method === 3) {
-            for (let i = 0; i < that.input.length; i++) {
-                if (that.input.indexOf(that.symbolToken) === -1) {
-                    alert('This symbol ' + that.symbolToken + ' not exist in input');
-                    return false;
-                } else {
-                    return true;
-                }
-            }
+            return Cipher.symbolCheck(that.slogan);
         }
     }
 
@@ -88,7 +81,7 @@ function TrithemiusController(Cipher, Trithemius, FileSaver, Blob) {
         that.paramA = null;
         that.paramB = null;
         that.paramC = null;
-        that.symbolToken = null;
+        that.slogan = null;
     };
 
     that.download = () => {

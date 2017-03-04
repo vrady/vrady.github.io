@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('cryptographyApp').factory('Cipher', ['Alphabet', Cipher]);
 

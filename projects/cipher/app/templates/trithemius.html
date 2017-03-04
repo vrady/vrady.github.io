@@ -39,13 +39,13 @@
                 <input type="number" ng-model="trithemius.paramC">
             </md-input-container>
             <md-input-container ng-if="trithemius.method === 3">
-                <label>Symbol</label>
-                <input maxlength="1" ng-model="trithemius.symbolToken">
+                <label>Slogan</label>
+                <input ng-model="trithemius.slogan">
             </md-input-container>
         </div>
         <div layout-gt-sm="row" class="flex flex-h flex-w">
-            <md-button ng-disabled="!trithemius.input" ng-click="trithemius.encrypt()" class="md-raised">Encrypt</md-button>
-            <md-button ng-disabled="!trithemius.input" ng-click="trithemius.decrypt()" class="md-raised">Decrypt</md-button>
+            <md-button ng-disabled="!trithemius.input || !trithemius.method" ng-click="trithemius.encrypt()" class="md-raised">Encrypt</md-button>
+            <md-button ng-disabled="!trithemius.input || !trithemius.method" ng-click="trithemius.decrypt()" class="md-raised">Decrypt</md-button>
             <input on-read-file="trithemius.openFile($fileContent)" id="fileInput1" type="file" class="ng-hide" accept="text/plain">
             <md-button class="md-raised">
                 <label for="fileInput1">Open</label>

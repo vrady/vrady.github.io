@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('cryptographyApp').service('Trithemius', ['Alphabet', Trithemius]);
 
@@ -26,7 +26,7 @@ function Trithemius(Alphabet) {
                 key = quadraticKey(i, args[1], args[2], args[3]);
             }
             if (args.length === 2) {
-                key = symbolKey(args[1]);
+                key = symbolKey(args[1][i % args[1].length]);
             }
             if (state) {
                 key *= -1;
@@ -46,8 +46,8 @@ function Trithemius(Alphabet) {
         return A * Math.pow(number, 2) + B * number + C;
     }
 
-    function symbolKey(symbol) {
-
+    function symbolKey(slogan) {
+        return Alphabet.ALPHABET.indexOf(slogan);
     }
 
     return this;
