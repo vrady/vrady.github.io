@@ -1,0 +1,51 @@
+<md-content class="md-padding">
+    <div class="container">
+        <div class="flex flex-h">
+            <span class="md-headline">XOR Method</span>
+        </div>
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="XOR.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h">
+            <md-input-container>
+                <label>Period</label>
+                <input type="number" ng-model="XOR.period">
+            </md-input-container>
+            <md-input-container>
+                <label>Param A</label>
+                <input type="number" ng-model="XOR.paramA">
+            </md-input-container>
+            <md-input-container>
+                <label>Param B</label>
+                <input type="number" ng-model="XOR.paramB">
+            </md-input-container>
+            <md-input-container>
+                <label>Initial param</label>
+                <input type="number" ng-model="XOR.initial">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!XOR.input || !XOR.period || !XOR.paramA || !XOR.paramB ||
+             !XOR.initial" ng-click="XOR.encrypt()" class="md-raised">
+                Encrypt
+            </md-button>
+            <md-button ng-disabled="!XOR.input || !XOR.period || !XOR.paramA || !XOR.paramB ||
+             !XOR.initial" ng-click="XOR.decrypt()" class="md-raised">
+                Decrypt
+            </md-button>
+            <input on-read-file="XOR.openFile($fileContent)" id="fileInput2" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput2">Open</label>
+            </md-button>
+            <md-button ng-disabled="!XOR.input" ng-click="XOR.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!XOR.input && !XOR.period  && !XOR.paramA && !XOR.paramB && !XOR.initial"
+                       ng-click="XOR.clear()"
+                       class="md-raised">New
+            </md-button>
+        </div>
+    </div>
+</md-content>

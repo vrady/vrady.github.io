@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cryptographyApp').controller('CryptographyController', ['$scope', 'Cipher', 'Caesar', 'Trithemius', 'FileSaver', 'Blob', CryptographyController])
+angular.module('cryptographyApp').controller('CryptographyController', ['$scope', '$sce', CryptographyController]);
 
 function CryptographyController() {
 

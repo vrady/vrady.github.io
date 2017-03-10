@@ -14,6 +14,9 @@
 <section class="cipher" ng-controller="CryptographyController as crypt">
     <md-content>
         <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="lab3">
+                <XOR></XOR>
+            </md-tab>
             <md-tab label="lab2">
                 <trithemius></trithemius>
             </md-tab>
@@ -33,8 +36,10 @@
 <script src="app/services/CipherFactory.js"></script>
 <script src="app/services/CaesarService.js"></script>
 <script src="app/services/TrithemiusService.js"></script>
+<script src="app/services/XORService.js"></script>
 <script src="app/directives/onReadFile.js"></script>
 <script src="app/directives/CaesarDirective.js"></script>
 <script src="app/directives/TrithemiusDirective.js"></script>
+<script src="app/directives/XORDirective.js"></script>
 </body>
 </html>

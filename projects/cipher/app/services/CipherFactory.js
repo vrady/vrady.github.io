@@ -16,8 +16,8 @@ function Cipher(Alphabet) {
                     alert('This symbol ' + input[i] + ' not exist');
                     return false;
                 }
-                return true;
             }
+            return true;
         },
         keyCheck: (key) => {
             return key < Number.MAX_SAFE_INTEGER && key > Number.MIN_SAFE_INTEGER;
