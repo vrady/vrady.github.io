@@ -1,0 +1,39 @@
+<md-content class="md-padding">
+    <div class="container">
+        <div class="flex flex-h">
+            <span class="md-headline">Literature Method</span>
+        </div>
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="literature.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+            <md-input-container>
+                <label>Input literature fragment</label>
+                <textarea style="max-height: 216px;" ng-model="literature.fragment" rows="8" cols="70"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!literature.input || !literature.fragment" ng-click="literature.encrypt()" class="md-raised">
+                Encrypt
+            </md-button>
+            <md-button ng-disabled="!literature.input || !literature.fragment" ng-click="literature.decrypt()" class="md-raised">
+                Decrypt
+            </md-button>
+            <input on-read-file="literature.openFile($fileContent)" id="fileInput3" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput3">Open file</label>
+            </md-button>
+            <input on-read-file="literature.literatureFile($fileContent)" id="fileInput4" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput4">Open literature fragment</label>
+            </md-button>
+            <md-button ng-disabled="!literature.input" ng-click="literature.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!literature.input && !literature.fragment" ng-click="literature.clear()"
+                       class="md-raised">New
+            </md-button>
+        </div>
+    </div>
+</md-content>

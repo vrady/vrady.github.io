@@ -12,30 +12,16 @@ function xor() {
     }
 }
 
-function XORController(Cipher, XOR, FileSaver, Blob) {
+function XORController(XOR, FileSaver, Blob) {
     let that = this;
 
-    that.encrypt = () => {
-        if (checking()) {
-            that.input = XOR.encrypt(that.input, that.period, that.initial, that.paramA, that.paramB);
+    that.decode = () => {
+        if (XOR.checking(that.period, that.input)) {
+            that.input = XOR.decode(that.input, that.period, that.initial, that.paramA, that.paramB);
+        } else {
+            alert('Period must be longer than input length = ' + that.input.length);
         }
     };
-
-    that.decrypt = () => {
-        if (checking()) {
-            that.input = XOR.decrypt(that.input, that.period, that.initial, that.paramA, that.paramB);
-        }
-    };
-
-    function checking() {
-        if (!Cipher.symbolCheck(that.input)) {
-            return false;
-        }
-        if (that.period < that.input.length) {
-            alert('Period must be longer that input length');
-            return false;
-        } else return true;
-    }
 
     that.openFile = ($fileContent) => {
         that.input = $fileContent.toString();

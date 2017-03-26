@@ -29,11 +29,11 @@
         </div>
         <div layout-gt-sm="row" class="flex flex-h flex-w">
             <md-button ng-disabled="!XOR.input || !XOR.period || !XOR.paramA || !XOR.paramB ||
-             !XOR.initial" ng-click="XOR.encrypt()" class="md-raised">
+             !XOR.initial" ng-click="XOR.decode()" class="md-raised">
                 Encrypt
             </md-button>
             <md-button ng-disabled="!XOR.input || !XOR.period || !XOR.paramA || !XOR.paramB ||
-             !XOR.initial" ng-click="XOR.decrypt()" class="md-raised">
+             !XOR.initial" ng-click="XOR.decode()" class="md-raised">
                 Decrypt
             </md-button>
             <input on-read-file="XOR.openFile($fileContent)" id="fileInput2" type="file" class="ng-hide"
