@@ -53,14 +53,13 @@ function Literature() {
             output += getRandIndex(keys, input[i]) + " ";
         }
 
-        return output;
+        return output.substring(0, output.length - 1);
     }
 
     function decrypt(input, fragment) {
         let keys = createKeys(fragment);
         let output = '';
         let indexes = input.split(" ");
-        indexes.pop();
 
         for (let i = 0; i < indexes.length; i++) {
             output += getSymbol(keys, indexes[i]);
@@ -105,7 +104,7 @@ function Literature() {
                 column++;
             }
         }
-        
+
         return keys;
     }
 

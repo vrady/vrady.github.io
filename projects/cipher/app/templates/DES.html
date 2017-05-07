@@ -1,0 +1,48 @@
+<md-content class="md-padding">
+    <div class="container">
+        <div class="flex flex-h">
+            <span class="md-headline">DES Method</span>
+        </div>
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="des.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h">
+            <md-input-container>
+                <label>Mode</label>
+                <md-select ng-model="des.method">
+                    <md-option ng-repeat="mode in des.methods" ng-value="mode.value">
+                        {{mode.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-if="des.method">
+                <label>Key</label>
+                <input type="text" ng-model="des.key">
+            </md-input-container>
+            <md-input-container ng-if="des.method && des.method != 1">
+                <label>Initial vector</label>
+                <input type="text" ng-model="des.iv">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!des.input || !des.key || !des.method" ng-click="des.encrypt()" class="md-raised">
+                Encrypt
+            </md-button>
+            <md-button ng-disabled="!des.input || !des.key || !des.method" ng-click="des.decrypt()" class="md-raised">
+                Decrypt
+            </md-button>
+            <input on-read-file="des.openFile($fileContent)" id="fileInput5" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput5">Open</label>
+            </md-button>
+            <md-button ng-disabled="!des.input" ng-click="des.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!des.input && !des.key && !des.method" ng-click="des.clear()"
+                       class="md-raised">New
+            </md-button>
+        </div>
+    </div>
+</md-content>
