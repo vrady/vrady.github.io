@@ -1,0 +1,48 @@
+<md-content class="md-padding">
+    <div class="container">
+        <div class="flex flex-h">
+            <span class="md-headline">RSA</span>
+        </div>
+        <div class="flex flex-h">
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="rsa.input" rows="8" cols="100"></textarea>
+            </md-input-container>
+            <md-input-container>
+                <label>Public Key</label>
+                <textarea ng-model="rsa.publicKey" rows="8" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h">
+            <md-input-container>
+                <label>Input pass phrase</label>
+                <input type="text" ng-model="rsa.passphrase">
+            </md-input-container>
+            <md-input-container>
+                <label>Length (bit)</label>
+                <md-select ng-model="rsa.length">
+                    <md-option ng-repeat="mode in rsa.lengths" ng-value="mode.value">
+                        {{mode.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="flex flex-h flex-w">
+            <md-button ng-disabled="!rsa.input || !rsa.length" ng-click="rsa.encrypt()" class="md-raised">
+                Encrypt
+            </md-button>
+            <md-button ng-disabled="!rsa.input || !rsa.length" ng-click="rsa.decrypt()" class="md-raised">
+                Decrypt
+            </md-button>
+            <input on-read-file="rsa.openFile($fileContent)" id="fileInput6" type="file" class="ng-hide"
+                   accept="text/plain">
+            <md-button class="md-raised">
+                <label for="fileInput6">Open</label>
+            </md-button>
+            <md-button ng-disabled="!rsa.input" ng-click="rsa.download()" class="md-raised">Save</md-button>
+            <md-button ng-disabled="!rsa.input && !rsa.key && !rsa.method" ng-click="rsa.clear()"
+                       class="md-raised">New
+            </md-button>
+        </div>
+    </div>
+</md-content>

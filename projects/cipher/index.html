@@ -14,6 +14,9 @@
 <section class="cipher" ng-controller="CryptographyController as crypt">
     <md-content>
         <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="lab6">
+                <rsa></rsa>
+            </md-tab>
             <md-tab label="lab5">
                 <des></des>
             </md-tab>
@@ -42,6 +45,13 @@
 <script src="app/assets/js/CryptoJS/components/mode-cfb.js"></script>
 <script src="app/assets/js/CryptoJS/components/mode-ofb.js"></script>
 <script src="app/assets/js/CryptoJS/components/mode-ctr.js"></script>
+<script src="app/assets/js/Cryptico/aes.js"></script>
+<script src="app/assets/js/Cryptico/api.js"></script>
+<script src="app/assets/js/Cryptico/cryptico.js"></script>
+<script src="app/assets/js/Cryptico/hash.js"></script>
+<script src="app/assets/js/Cryptico/jsbn.js"></script>
+<script src="app/assets/js/Cryptico/random.js"></script>
+<script src="app/assets/js/Cryptico/rsa.js"></script>
 <script src="app/app.js"></script>
 <script src="app/controllers/CryptographyController.js"></script>
 <script src="app/services/CipherFactory.js"></script>
@@ -50,11 +60,13 @@
 <script src="app/services/XORService.js"></script>
 <script src="app/services/LiteratureService.js"></script>
 <script src="app/services/DESService.js"></script>
+<script src="app/services/RSAService.js"></script>
 <script src="app/directives/onReadFile.js"></script>
 <script src="app/directives/CaesarDirective.js"></script>
 <script src="app/directives/TrithemiusDirective.js"></script>
 <script src="app/directives/XORDirective.js"></script>
 <script src="app/directives/LiteratureDirective.js"></script>
 <script src="app/directives/DESDirective.js"></script>
+<script src="app/directives/RSADirective.js"></script>
 </body>
 </html>
