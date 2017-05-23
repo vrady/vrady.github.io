@@ -21,29 +21,45 @@ function RSAController(RSA, FileSaver, Blob) {
         //{name: '4096 bit', value: 4096}
     ];
 
-    that.encrypt = () => {
-        that.privateKey = cryptico.generateRSAKey(that.passphrase, that.length);
-        that.publicKey = cryptico.publicKeyString(that.privateKey);
-        that.input = cryptico.encrypt(that.input, that.publicKey).cipher;
+    that.generateKeys = () => {
+        that.privateKeyBob = cryptico.generateRSAKey(that.passphraseBob, that.length);
+        that.publicKeyBob = cryptico.publicKeyString(that.privateKeyBob);
+        that.privateKeyAlice = cryptico.generateRSAKey(that.passphraseAlice, that.length);
+        that.publicKeyAlice = cryptico.publicKeyString(that.privateKeyAlice);
+    }
+
+    that.encryptBob = () => {
+        that.inputBob = cryptico.encrypt(that.inputBob, that.publicKeyAlice).cipher;
     };
 
-    that.decrypt = () => {
-        that.input = cryptico.decrypt(that.input, that.privateKey).plaintext;
+    that.decryptBob = () => {
+        that.inputBob = cryptico.decrypt(that.inputBob, that.privateKeyBob).plaintext;
+    };
+
+    that.encryptAlice = () => {
+        that.inputAlice = cryptico.encrypt(that.inputAlice, that.publicKeyBob).cipher;
+    };
+
+    that.decryptAlice = () => {
+        that.inputAlice = cryptico.decrypt(that.inputAlice, that.privateKeyAlice).plaintext;
     };
 
     that.openFile = ($fileContent) => {
-        that.input = $fileContent.toString();
+        that.inputBob = $fileContent.toString();
     };
 
     that.clear = () => {
-        that.input = null;
+        that.inputBob = null;
+        that.inputAlice = null;
         that.length = null;
-        that.passphrase = null;
-        that.publicKey = null;
+        that.passphraseBob = null;
+        that.passphraseAlice = null;
+        that.publicKeyBob = null;
+        that.publicKeyAlice = null;
     };
 
     that.download = () => {
-        let data = new Blob([that.input], { type: 'text/plain;charset=utf-8' });
+        let data = new Blob([that.inputBob], { type: 'text/plain;charset=utf-8' });
         FileSaver.saveAs(data, 'text.txt');
     }
 }

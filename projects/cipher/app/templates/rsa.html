@@ -4,19 +4,37 @@
             <span class="md-headline">RSA</span>
         </div>
         <div class="flex flex-h">
+            <span class="md-headline">Bob</span>
             <md-input-container>
                 <label>Input text</label>
-                <textarea ng-model="rsa.input" rows="8" cols="100"></textarea>
+                <textarea ng-model="rsa.inputBob" rows="5" cols="100"></textarea>
             </md-input-container>
             <md-input-container>
-                <label>Public Key</label>
-                <textarea ng-model="rsa.publicKey" rows="8" cols="100"></textarea>
+                <label>Bob`s Public Key</label>
+                <textarea ng-model="rsa.publicKeyBob" rows="5" cols="100"></textarea>
+            </md-input-container>
+        </div>
+        <div class="flex flex-h">
+            <span class="md-headline">Alice</span>
+            <md-input-container>
+                <label>Input text</label>
+                <textarea ng-model="rsa.inputAlice" rows="5" cols="100"></textarea>
+            </md-input-container>
+            <md-input-container>
+                <label>Alice`s Public Key</label>
+                <textarea ng-model="rsa.publicKeyAlice" rows="5" cols="100"></textarea>
             </md-input-container>
         </div>
         <div layout-gt-sm="row" class="flex flex-h">
+            <span class="">Bob</span>
             <md-input-container>
                 <label>Input pass phrase</label>
-                <input type="text" ng-model="rsa.passphrase">
+                <input type="text" ng-model="rsa.passphraseBob">
+            </md-input-container>
+            <span class="">Alice</span>
+            <md-input-container>
+                <label>Input pass phrase</label>
+                <input type="text" ng-model="rsa.passphraseAlice">
             </md-input-container>
             <md-input-container>
                 <label>Length (bit)</label>
@@ -28,11 +46,20 @@
             </md-input-container>
         </div>
         <div layout-gt-sm="row" class="flex flex-h flex-w">
-            <md-button ng-disabled="!rsa.input || !rsa.length" ng-click="rsa.encrypt()" class="md-raised">
-                Encrypt
+            <md-button ng-disabled="!rsa.passphraseBob || !rsa.passphraseAlice || !rsa.length" ng-click="rsa.generateKeys()" class="md-raised">
+                Generate keys   
             </md-button>
-            <md-button ng-disabled="!rsa.input || !rsa.length" ng-click="rsa.decrypt()" class="md-raised">
-                Decrypt
+            <md-button ng-disabled="!rsa.inputBob || !rsa.publicKeyAlice" ng-click="rsa.encryptBob()" class="md-raised">
+                Encrypt by Bob (Key from Alice)
+            </md-button>
+            <md-button ng-disabled="!rsa.inputBob || !rsa.privateKeyBob" ng-click="rsa.decryptBob()" class="md-raised">
+                Decrypt by Bob
+            </md-button>
+            <md-button ng-disabled="!rsa.inputAlice || !rsa.publicKeyBob" ng-click="rsa.encryptAlice()" class="md-raised">
+                Encrypt by Alice (Key from Bob)
+            </md-button>
+            <md-button ng-disabled="!rsa.inputAlice || !rsa.privateKeyAlice" ng-click="rsa.decryptAlice()" class="md-raised">
+                Decrypt by Alice
             </md-button>
             <input on-read-file="rsa.openFile($fileContent)" id="fileInput6" type="file" class="ng-hide"
                    accept="text/plain">
