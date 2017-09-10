@@ -171,6 +171,7 @@ body {
 
 .users__user:hover {
     background: #d7d7d7;
+    border-radius: 5px;
 }
 
 .users__user-img {
