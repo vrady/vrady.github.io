@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container flex">
+    <div class="menu__hamburger hamburger">
+        <span class="hamburger__span"></span>
+        <span class="hamburger__span"></span>
+        <span class="hamburger__span"></span>
+    </div>
+    <section class="menu menu--active">
+        <div class="menu__search">
+            <input placeholder="Search..." class="menu__search-input">
+        </div>
+        <div class="menu__users users">
+            <div class="users__user users__user--selected">
+                <img src="img/avatar1.jpg" alt="" class="users__user-img">
+                <div class="users__user-name">Steve Jobs</div>
+            </div>
+            <div class="users__user">
+                <img src="img/avatar.jpg" alt="" class="users__user-img">
+                <div class="users__user-name">Some person</div>
+            </div>
+            <div class="users__user">
+                <img src="img/avatar.jpg" alt="" class="users__user-img">
+                <div class="users__user-name">BlaBla</div>
+            </div>
+        </div>
+    </section>
+    <section class="chat">
+        <div class="chat__messages">
+            <div class="chat__message message message--sender">
+                <img src="img/avatar.jpg" alt="" class="message-img">
+                <div class="message-text message-text--sender">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto
+                    asperiores at ipsum iure non pariatur quis recusandae rem. Adipisci amet consectetur delectus esse
+                    magni, nostrum praesentium quia quod recusandae reprehenderit.
+                </div>
+            </div>
+            <div class="chat__message message message--recipient">
+                <img src="img/avatar1.jpg" alt="" class="message-img">
+                <div class="message-text message-text--recipient">Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Architecto
+                    asperiores at ipsum iure non pariatur quis recusandae rem. Adipisci amet consectetur delectus esse
+                    magni, nostrum praesentium quia quod recusandae reprehenderit.
+                </div>
+            </div>
+            <div class="chat__message message message--sender">
+                <img src="img/avatar.jpg" alt="" class="message-img">
+                <div class="message-text message-text--sender">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto
+                    asperiores at ipsum iure non pariatur quis recusandae rem. Adipisci amet consectetur delectus esse
+                    magni, nostrum praesentium quia quod recusandae reprehenderit.
+                </div>
+            </div>
+            <div class="chat__message message message--recipient">
+                <img src="img/avatar1.jpg" alt="" class="message-img">
+                <div class="message-text message-text--recipient">Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Architecto
+                    asperiores at ipsum iure non pariatur quis recusandae rem. Adipisci amet consectetur delectus esse
+                    magni, nostrum praesentium quia quod recusandae reprehenderit.
+                </div>
+            </div>
+        </div>
+        <form class="chat__input input">
+            <textarea class="input-message" placeholder="Click here to write something"></textarea>
+            <input type="submit" class="input-send"/>
+        </form>
+    </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
