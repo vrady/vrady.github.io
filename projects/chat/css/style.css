@@ -69,8 +69,6 @@ body {
     outline: none;
 }
 
-
-
 .hamburger {
     position: absolute;
     display: none;
@@ -307,7 +305,13 @@ body {
         padding: 0;
     }
 
+    .menu {
+        position: absolute;
+        width: 100%;
+    }
+
     .menu--active {
+        display: none;
         opacity: 0;
         z-index: -1;
     }
@@ -325,11 +329,6 @@ body {
         display: block;
     }
 
-    .menu {
-        position: absolute;
-        z-index: 999;
-        width: 100%;
-    }
 
     .chat {
         padding-top: 30px;
