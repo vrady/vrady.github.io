@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Лабораторна робота 5. Врадій Дмитро ТР-42</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        .controls {
+            float: left;
+        }
+        canvas {
+            float: right;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <br>
+        <label for="q2">Поворот відносно Y:
+            <span id="q2Value"></span>
+        </label>
+        <input onchange="onAxesChangeQ()" oninput="onAxesChangeQ()" type="range" id="q2" min="-360" max="360" step="1" value="30">
+        <br>
+        <label for="f2">Поворот відносно X:
+            <span id="f2Value"></span>
+        </label>
+        <input onchange="onAxesChangeF()" oninput="onAxesChangeF()" type="range" id="f2" min="-360" max="360" step="1" value="30">
+        <br>
+        <label for="zoom">Масштаб :
+            <span id="zoomValue"></span>
+        </label>
+        <input onchange="onZoomChange()" oninput="onZoomChange()" type="range" id="zoom" min="1" max="20" step="0.1" value="10">
+        <br>
+        <label for="translateX">Перенос по X:
+            <span id="translateXValue"></span>
+        </label>
+        <input onchange="onTranslateX()" oninput="onTranslateX()" type="range" id="translateX" min="-10" max="10" step="0.1" value="0">
+        <br>
+        <label for="translateY">Перенос по Y:
+            <span id="translateYValue"></span>
+        </label>
+        <input onchange="onTranslateY()" oninput="onTranslateY()" type="range" id="translateY" min="-10" max="10" step="0.1" value="0">
+        <br>
+        <label for="translateZ">Перенос по Z:
+            <span id="translateZValue"></span>
+        </label>
+        <input onchange="onTranslateZ()" oninput="onTranslateZ()" type="range" id="translateZ" min="-10" max="10" step="0.1" value="0">
+        <br>
+        <label for="translateAngleY">Поворот фігури по Y:
+            <span id="translateAngleYValue"></span>
+        </label>
+        <input onchange="onTranslateAngleY()" oninput="onTranslateAngleY()" type="range" id="translateAngleY" min="-360" max="360"
+            step="1" value="0">
+        <br>
+        <label for="translateAngleX">Поворот фігури по X:
+            <span id="translateAngleXValue"></span>
+        </label>
+        <input onchange="onTranslateAngleX()" oninput="onTranslateAngleX()" type="range" id="translateAngleX" min="-360" max="360"
+            step="1" value="0">
+        <br>
+        <label for="translateAngleZ">Поворот фігури по Z:
+            <span id="translateAngleZValue"></span>
+        </label>
+        <input onchange="onTranslateAngleZ()" oninput="onTranslateAngleZ()" type="range" id="translateAngleZ" min="-360" max="360"
+            step="1" value="0">
+    </div>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
